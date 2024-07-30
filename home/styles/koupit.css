@@ -8,7 +8,7 @@ li {
   gap: 7px;
 }
 
-article.plans {
+form.plans {
   padding: 75px 0px;
   width: 100%;
   text-align: center;
@@ -21,7 +21,8 @@ article.plans {
 }
 
 section#plans-table {
-  width: 90%;
+  width: 100%;
+  max-width: 900px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-row: 1fr;
@@ -37,7 +38,6 @@ article.plan {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   padding: 25px;
   background-color: white;
-  border: solid 2px #0a369d;
   border-radius: 12px;
 }
 
@@ -51,7 +51,7 @@ article.plan > span {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 30px;
 }
 
 ul.plan-list {
@@ -68,13 +68,9 @@ article.plan button {
 }
 
 .price {
-  font-size: 3.2rem;
+  font-size: 3rem;
   color: var(--primary);
   font-weight: 500;
-}
-
-.price-duration {
-  color: black;
 }
 
 @media (max-width: 800px) {
