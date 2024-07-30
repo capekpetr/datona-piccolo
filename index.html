@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PiCCOLO - spolehlivá pokladna do kapsy</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://api.ssps.cajthaml.eu/file/64d9f18f79dad891e8a07c73"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/home/styles/style.css"
+      media="screen"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/home/styles/home.css"
+      media="screen"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!--BURGER MENU-->
+    <div id="burger-menu">
+      <header>
+        <section class="logo">
+          <a href="/"
+            ><img src="/home/images/logo.svg" alt="logo" class="logo"
+          /></a>
+        </section>
+        <i class="fa-solid fa-xmark burger-menu-icon"></i>
+      </header>
+      <nav>
+        <ul class="burger-nav-bar">
+          <a class="hover-animation" href="/home/gallery.html">Galerie</a>
+          <a class="hover-animation" href="#features-section">Funkce</a>
+          <a class="hover-animation" href="#social-proof-section">Reference</a>
+          <a class="hover-animation" href="#faq-section">FAQ</a>
+          <a class="hover-animation" href="/home/koupit">Koupit</a>
+        </ul>
+      </nav>
+      <form class="burger-login" method="post">
+        <h3>Přihlášení</h3>
+        <div class="form-group">
+          <input
+            size="1"
+            type="text"
+            id="burger-username"
+            placeholder="Zadejte uživatelské jméno"
+            required
+            autofocus
+            name="Login"
+            value=""
+          />
+        </div>
+        <div class="form-group">
+          <input
+            size="1"
+            type="password"
+            id="burger-password"
+            placeholder="Zadejte heslo"
+            required
+            name="Heslo"
+          />
+        </div>
+        <button type="submit" class="primary-button hover-animation">
+          Přihlásit se
+        </button>
+        <div class="forgot-password-wrapper">
+          <a
+            href="https://pokladna-piccolo.cz/ZapomenuteHeslo"
+            class="forgot-password"
+            >Zapomenuté heslo?</a
+          >
+        </div>
+        <input
+          name="__RequestVerificationToken"
+          type="hidden"
+          value="CfDJ8I_9FnGAjtVNmNtBcQKOBKoUgruNuD9HVNGTyZCKJATKybmrR9qlRq-h8FTaZlfx4MtVY10vINVL3za22tVjhV_Zq25In_8nS5ryvNQVc3ReFTSw3K0VMyKanfKJ5ry628mNpqh6AXp3YkNbod20c_k"
+        />
+      </form>
+    </div>
+    <!--LOGIN WINDOW-->
+    <div id="login-window">
+      <form class="burger-login" method="post">
+        <h3>Přihlášení</h3>
+        <div class="form-group">
+          <input
+            size="1"
+            type="text"
+            id="username2"
+            placeholder="Zadejte uživatelské jméno"
+            name="Login"
+            value=""
+          />
+        </div>
+        <div class="form-group">
+          <input
+            size="1"
+            type="password"
+            id="password"
+            placeholder="Zadejte heslo"
+            name="Heslo"
+          />
+        </div>
+        <button type="submit" class="primary-button hover-animation">
+          Přihlásit se
+        </button>
+        <div class="forgot-password-wrapper">
+          <a
+            href="https://pokladna-piccolo.cz/ZapomenuteHeslo"
+            class="forgot-password"
+            >Zapomenuté heslo?</a
+          >
+        </div>
+        <input
+          name="__RequestVerificationToken"
+          type="hidden"
+          value="CfDJ8I_9FnGAjtVNmNtBcQKOBKoUgruNuD9HVNGTyZCKJATKybmrR9qlRq-h8FTaZlfx4MtVY10vINVL3za22tVjhV_Zq25In_8nS5ryvNQVc3ReFTSw3K0VMyKanfKJ5ry628mNpqh6AXp3YkNbod20c_k"
+        />
+      </form>
+    </div>
+    <section id="container">
+      <!--HEADER-->
+      <header>
+        <section class="logo">
+          <a href="/"
+            ><img src="/home/images/logo.svg" alt="logo" class="logo"
+          /></a>
+        </section>
+        <nav>
+          <ul class="nav-bar">
+            <a class="hover-animation" href="/home/gallery.html">Galerie</a>
+            <a class="hover-animation" href="#features-section">Funkce</a>
+            <a class="hover-animation" href="#social-proof-section"
+              >Reference</a
+            >
+            <a class="hover-animation" href="#faq-section">FAQ</a>
+            <a class="hover-animation" href="/home/koupit.html">Koupit</a>
+            <button class="primary-button hover-animation login-button">
+              Přihlásit se
+            </button>
+          </ul>
+        </nav>
+        <i class="fa-solid fa-bars burger-menu-icon"></i>
+      </header>
+      <main>
+        <!--HERO SECTION-->
+        <section id="hero-section">
+          <article class="hero-text">
+            <section class="hero-headline">
+              <h1>
+                Spolehlivá <span class="text-highlight">pokladna do kapsy</span>
+              </h1>
+              <p>
+                Pokladna PiCCOLO je jednoduchá a spolehlivá pokladna s přístupem
+                z webu nebo mobilní aplikace
+              </p>
+            </section>
+            <section class="cta-button-wrapper">
+              <button
+                onclick="location.href='/home/koupit.html'"
+                class="primary-button hover-animation"
+                value="Koupit PiCCOLO"
+              >
+                Koupit
+              </button>
+              <p>Naši pokladnu používá <br />již více než 250 firem!</p>
+            </section>
+          </article>
+          <section class="hero-image-wrapper">
+            <img src="/home/images/hero.png" alt="" id="hero-image" />
+          </section>
+        </section>
+        <!--FEATURES SECTION-->
+        <section id="features-section">
+          <article class="feature">
+            <section class="feature-heading">
+              <i class="fa-solid fa-lock"></i>
+              <h3>Rychlost a bezpečnost</h3>
+            </section>
+            <p>
+              Pokladna PiCCOLO je rychlá, bezpečná a intuitivní. Přidat položku,
+              obrázek či změnit cenu zvládne každý.
+            </p>
+          </article>
+          <article class="feature">
+            <section class="feature-heading">
+              <i class="fa-solid fa-cloud"></i>
+              <h3>Zálohování, aktualizace</h3>
+            </section>
+            <p>
+              Pokladna PiCCOLO drží krok s legislativou. Upgrade na nové verze i
+              zálohování děláme za vás.
+            </p>
+          </article>
+          <article class="feature">
+            <section class="feature-heading">
+              <i class="fa-solid fa-chart-simple"></i>
+              <h3>Statistiky a reporty</h3>
+            </section>
+            <p>
+              Přehledné zobrazení účtenek a prodaných položek v grafech a export
+              seznamů prodejů do excelu.
+            </p>
+          </article>
+        </section>
+        <!--ABOUT PICCOLO SECTION-->
+        <section id="about-piccolo-section">
+          <img
+            src="/home/images/piccoloMobile.png"
+            alt="mobileImage"
+            id="mobile-image"
+          />
+          <section class="about-piccolo-text">
+            <h2>
+              Díky PiCCOLU máte
+              <span class="text-highlight"
+                >všechny důležité informace na jednom místě</span
+              >
+            </h2>
+            <p>
+              Účtenky, platby, závěrky, statistiky i všechno ostatní přehledně
+              uspořádané a na dosah ruky.
+            </p>
+          </section>
+        </section>
+        <!--PICCOLO USAGE SECTION-->
+        <section id="piccolo-usage-section">
+          <h2 class="white-color">
+            PiCCOLO je kompatibilní s jakýmkoliv zařízením s přístupem k
+            internetu
+          </h2>
+          <section class="cards">
+            <article class="card">
+              <section class="card-image">
+                <img src="/home/images/terminal.png" alt="piccoloTerminal" />
+              </section>
+              <h3>Platební terminál</h3>
+            </article>
+            <article class="card">
+              <section class="card-image">
+                <img
+                  src="/home/images/iphonePiccolo.png"
+                  alt="piccoloTerminal"
+                />
+              </section>
+              <h3>Mobilní aplikace</h3>
+            </article>
+            <article class="card">
+              <section class="card-image">
+                <img src="/home/images/webPiccolo.png" alt="piccoloTerminal" />
+              </section>
+              <h3>Webový prohlížeč</h3>
+            </article>
+          </section>
+        </section>
+        <!--SOCIAL PROOF SECTION-->
+        <section id="social-proof-section">
+          <h2>
+            S námi jste <span class="text-highlight">v dobrých rukou</span>
+          </h2>
+          <section class="reviews">
+            <article class="review">
+              <p>
+                "PiCCOLO je skvělá pokladna, která mi usnadňuje práci. Rychle se
+                naučíte, jak ji ovládat, a všechny funkce jsou přehledně
+                uspořádané.”
+              </p>
+              <span>
+                <img
+                  class="person-image"
+                  src="/home/images/personImage1.jpg"
+                  alt=""
+                />
+                <p><b>Marie Svobodová</b></p>
+                <p>Majitelka obchodu s potravinami</p>
+              </span>
+            </article>
+            <article class="review">
+              <p>
+                “Pokladnu PiCCOLO používáme v naší restauraci již několik měsíců
+                a jsme s ní spokojeni. Je spolehlivá a nabízí všechny funkce,
+                které potřebujeme pro efektivní provoz.”
+              </p>
+              <span>
+                <img
+                  class="person-image"
+                  src="/home/images/personImage2.jpeg"
+                  alt=""
+                />
+                <p><b>Ing. Jiří Müller</b></p>
+                <p>Manažer restaurace</p>
+              </span>
+            </article>
+            <article class="review">
+              <p>
+                “Pokladna PiCCOLO byla pro mě jako majitele malé večerky jasnou
+                volbou. Je jednoduchá na ovládání, spolehlivá a hlavně cenově
+                dostupná.”
+              </p>
+              <span>
+                <img
+                  class="person-image"
+                  src="/home/images/personImage3.png"
+                  alt=""
+                />
+                <p><b>Li Wei Nguyen</b></p>
+                <p>Majitel sítě večerek</p>
+              </span>
+            </article>
+          </section>
+        </section>
+        <!--FAQ SECTION-->
+        <section id="faq-section">
+          <h2>Často se <span class="text-highlight">ptáte</span></h2>
+          <section class="faq">
+            <article class="question-wrapper">
+              <section class="question-heading">
+                <h3>Proč si vybrat PiCCOLO?</h3>
+                <i class="fa-solid fa-angle-right faq-icon"></i>
+              </section>
+              <p class="faq-answer">
+                Pokladna PiCCOLO je intuitivní, funkční, spolehlivá. Přidáváme
+                nové vlastnosti podle potřeb úživatelů.
+              </p>
+              <hr />
+            </article>
+            <article class="question-wrapper">
+              <section class="question-heading">
+                <h3>Co dostanu, když si PiCCOLO objednám?</h3>
+                <i class="fa-solid fa-angle-right faq-icon"></i>
+              </section>
+              <p class="faq-answer">
+                Obdžíte licenční certifikát pro aktivaci Pokladny. Dostanete
+                pokladnu a přístup do správy PiCCOLO. Správu PiCCOLO můžete
+                sdílet např. s Vaší účetní.
+              </p>
+              <hr />
+            </article>
+            <article class="question-wrapper">
+              <section class="question-heading">
+                <h3>Jak probíhá aktivace?</h3>
+                <i class="fa-solid fa-angle-right faq-icon"></i>
+              </section>
+              <p class="faq-answer">
+                Tabletem nebo telefonem, který budete používat jako pokladnu
+                vyfotíte QR kod na zakoupeném licenčním certifikátu a vyplníte
+                aktiváční formulář.
+              </p>
+              <hr />
+            </article>
+            <article class="question-wrapper">
+              <section class="question-heading">
+                <h3>Co když si zapomenu prodloužit aktivaci?</h3>
+                <i class="fa-solid fa-angle-right faq-icon"></i>
+              </section>
+              <p class="faq-answer">
+                Před koncem předplacené periody Vám zašleme email s upozorněním.
+                Pokud o pár dnů nestihnete termín, pokladna Vám sice přestane
+                prodávat ale data se vám neztratí.
+              </p>
+              <hr />
+            </article>
+            <article class="question-wrapper">
+              <section class="question-heading">
+                <h3>Na čem běží pokladna PiCCOLO?</h3>
+                <i class="fa-solid fa-angle-right faq-icon"></i>
+              </section>
+              <p class="faq-answer">
+                Pokladnu PiCCOLo rozjedete na tabletu nebo mobilním telefonu se
+                systémem Android verze 5.5 či vyšší nebo tablet/PC s Windows 10.
+                PiCCOLO můžete spolehlivě používat také z webového prohlížeče.
+              </p>
+            </article>
+          </section>
+        </section>
+        <!--DOWNLOAD APP SECTION-->
+        <section id="download-app-section">
+          <img
+            id="download-image"
+            src="/home/images/piccoloMobile.png"
+            alt=""
+          />
+          <section class="download-app-text">
+            <h2 class="white-color">Stáhněte si PiCCOLO</h2>
+            <p class="white-color">
+              Oficialní aplikaci pokladna PiCCOLO si můžete zdarma stáhnout a
+              vyzkoušet na Google Play.
+            </p>
+            <a
+              href="https://play.google.com/store/apps/details?id=datona.pokladnapiccolo&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+              ><img
+                class="google-play-badge hover-animation"
+                alt="Get it on Google Play"
+                src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+            /></a>
+          </section>
+        </section>
+      </main>
+      <!--FOOTER-->
+      <footer>
+        <article class="company">
+          <section class="logo">
+            <a href="/">
+              <img src="/home/images/logo.svg" alt="logo" id="footerLogo" />
+            </a>
+          </section>
+          <p>Spolehlivá pokladna do kapsy</p>
+        </article>
+        <article class="links">
+          <p><b>Důležité odkazy</b></p>
+          <a href="/home/koupit.html">Koupit</a>
+          <a class="login-button">Přihlásit se</a>
+          <a href="">Obchodní podmínky</a>
+          <a href="">Ochrana osobních údajů</a>
+        </article>
+        <article class="contact">
+          <p><b>Kontakt</b></p>
+          <a href="tel:+420602200655">Tel: +420 602 200 655</a>
+          <a href="mailto:piccolo@datona.cz">Email: piccolo@datona.cz</a>
+          <a href="https://maps.app.goo.gl/zGwgqbxN4EhgyEYY7">
+            Adresa: Podolská 401/50, 147 00, Praha 4, Podolí
+          </a>
+        </article>
+      </footer>
+    </section>
+    <script src="/home/scripts/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PiCCOLO - galerie pokladního systému</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://api.ssps.cajthaml.eu/file/64d9f18f79dad891e8a07c73"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./styles/style.css"
+      media="screen"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./styles/gallery.css"
+      media="screen"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!--BURGER MENU-->
+    <div id="burger-menu">
+      <header>
+        <section class="logo">
+          <a href="/"
+            ><img src="./images/logo.svg" alt="logo" class="logo"
+          /></a>
+        </section>
+        <i class="fa-solid fa-xmark burger-menu-icon"></i>
+      </header>
+      <nav>
+        <ul class="burger-nav-bar">
+          <a class="hover-animation" href="/">Domů</a>
+          <a class="hover-animation" href="/home/koupit.html">Koupit</a>
+        </ul>
+      </nav>
+      <form class="burger-login" method="post">
+        <h3>Přihlášení</h3>
+        <div class="form-group">
+          <input
+            size="1"
+            type="text"
+            id="burger-username"
+            placeholder="Zadejte uživatelské jméno"
+            required
+            autofocus
+            name="Login"
+            value=""
+          />
+        </div>
+        <div class="form-group">
+          <input
+            size="1"
+            type="password"
+            id="burger-password"
+            placeholder="Zadejte heslo"
+            required
+            name="Heslo"
+          />
+        </div>
+        <button type="submit" class="primary-button hover-animation">
+          Přihlásit se
+        </button>
+        <div class="forgot-password-wrapper">
+          <a
+            href="https://pokladna-piccolo.cz/ZapomenuteHeslo"
+            class="forgot-password"
+            >Zapomenuté heslo?</a
+          >
+        </div>
+        <input
+          name="__RequestVerificationToken"
+          type="hidden"
+          value="CfDJ8I_9FnGAjtVNmNtBcQKOBKoUgruNuD9HVNGTyZCKJATKybmrR9qlRq-h8FTaZlfx4MtVY10vINVL3za22tVjhV_Zq25In_8nS5ryvNQVc3ReFTSw3K0VMyKanfKJ5ry628mNpqh6AXp3YkNbod20c_k"
+        />
+      </form>
+    </div>
+    <!--LOGIN WINDOW-->
+    <div id="login-window">
+      <form class="burger-login" method="post">
+        <h3>Přihlášení</h3>
+        <div class="form-group">
+          <input
+            size="1"
+            type="text"
+            id="username2"
+            placeholder="Zadejte uživatelské jméno"
+            name="Login"
+            value=""
+          />
+        </div>
+        <div class="form-group">
+          <input
+            size="1"
+            type="password"
+            id="password"
+            placeholder="Zadejte heslo"
+            name="Heslo"
+          />
+        </div>
+        <button type="submit" class="primary-button hover-animation">
+          Přihlásit se
+        </button>
+        <div class="forgot-password-wrapper">
+          <a
+            href="https://pokladna-piccolo.cz/ZapomenuteHeslo"
+            class="forgot-password"
+            >Zapomenuté heslo?</a
+          >
+        </div>
+        <input
+          name="__RequestVerificationToken"
+          type="hidden"
+          value="CfDJ8I_9FnGAjtVNmNtBcQKOBKoUgruNuD9HVNGTyZCKJATKybmrR9qlRq-h8FTaZlfx4MtVY10vINVL3za22tVjhV_Zq25In_8nS5ryvNQVc3ReFTSw3K0VMyKanfKJ5ry628mNpqh6AXp3YkNbod20c_k"
+        />
+      </form>
+    </div>
+    <section id="container">
+      <!--HEADER-->
+      <header>
+        <section class="logo">
+          <a href="/"
+            ><img src="./images/logo.svg" alt="logo" class="logo"
+          /></a>
+        </section>
+        <nav>
+          <ul class="nav-bar">
+            <a class="hover-animation" href="/">Domů</a>
+            <a class="hover-animation" href="/home/koupit.html">Koupit</a>
+            <button class="primary-button hover-animation login-button">
+              Přihlásit se
+            </button>
+          </ul>
+        </nav>
+        <i class="fa-solid fa-bars burger-menu-icon"></i>
+      </header>
+      <main>
+        <section id="gallery"></section>
+        <section id="modal-container">
+          <img id="modal-image" />
+        </section>
+      </main>
+
+      <!--FOOTER-->
+      <footer>
+        <article class="company">
+          <section class="logo">
+            <a href="/">
+              <img src="./images/logo.svg" alt="logo" id="footerLogo" />
+            </a>
+          </section>
+          <p>Spolehlivá pokladna do kapsy</p>
+        </article>
+        <article class="links">
+          <p><b>Důležité odkazy</b></p>
+          <a href="/home/koupit.html">Koupit</a>
+          <a class="login-button">Přihlásit se</a>
+          <a href="">Obchodní podmínky</a>
+          <a href="">Ochrana osobních údajů</a>
+        </article>
+        <article class="contact">
+          <p><b>Kontakt</b></p>
+          <a href="tel:+420602200655">Tel: +420 602 200 655</a>
+          <a href="mailto:piccolo@datona.cz">Email: piccolo@datona.cz</a>
+          <a href="https://maps.app.goo.gl/zGwgqbxN4EhgyEYY7">
+            Adresa: Podolská 401/50, 147 00, Praha 4, Podolí
+          </a>
+        </article>
+      </footer>
+    </section>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/gallery.js"></script>
+  </body>
+</html>

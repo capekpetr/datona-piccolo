@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PiCCOLO - spolehlivá pokladna do kapsy</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://api.ssps.cajthaml.eu/file/64d9f18f79dad891e8a07c73"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./styles/style.css"
+      media="screen"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./styles/form.css"
+      media="screen"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!--BURGER MENU-->
+    <div id="burger-menu">
+      <header>
+        <section class="logo">
+          <a href="/"
+            ><img src="./images/logo.svg" alt="logo" class="logo"
+          /></a>
+        </section>
+        <i class="fa-solid fa-xmark burger-menu-icon"></i>
+      </header>
+      <nav>
+        <ul class="burger-nav-bar">
+          <a class="hover-animation" href="/">Domů</a>
+          <a class="hover-animation" href="/home/gallery.html">Galerie</a>
+        </ul>
+      </nav>
+      <form class="burger-login" method="post">
+        <h3>Přihlášení</h3>
+        <div class="form-group">
+          <input
+            size="1"
+            type="text"
+            id="burger-username"
+            placeholder="Zadejte uživatelské jméno"
+            required
+            autofocus
+            name="Login"
+            value=""
+          />
+        </div>
+        <div class="form-group">
+          <input
+            size="1"
+            type="password"
+            id="burger-password"
+            placeholder="Zadejte heslo"
+            required
+            name="Heslo"
+          />
+        </div>
+        <button type="submit" class="primary-button hover-animation">
+          Přihlásit se
+        </button>
+        <div class="forgot-password-wrapper">
+          <a
+            href="https://pokladna-piccolo.cz/ZapomenuteHeslo"
+            class="forgot-password"
+            >Zapomenuté heslo?</a
+          >
+        </div>
+        <input
+          name="__RequestVerificationToken"
+          type="hidden"
+          value="CfDJ8I_9FnGAjtVNmNtBcQKOBKoUgruNuD9HVNGTyZCKJATKybmrR9qlRq-h8FTaZlfx4MtVY10vINVL3za22tVjhV_Zq25In_8nS5ryvNQVc3ReFTSw3K0VMyKanfKJ5ry628mNpqh6AXp3YkNbod20c_k"
+        />
+      </form>
+    </div>
+    <!--LOGIN WINDOW-->
+    <div id="login-window">
+      <form class="burger-login" method="post">
+        <h3>Přihlášení</h3>
+        <div class="form-group">
+          <input
+            size="1"
+            type="text"
+            id="username2"
+            placeholder="Zadejte uživatelské jméno"
+            name="Login"
+            value=""
+          />
+        </div>
+        <div class="form-group">
+          <input
+            size="1"
+            type="password"
+            id="password"
+            placeholder="Zadejte heslo"
+            name="Heslo"
+          />
+        </div>
+        <button type="submit" class="primary-button hover-animation">
+          Přihlásit se
+        </button>
+        <div class="forgot-password-wrapper">
+          <a
+            href="https://pokladna-piccolo.cz/ZapomenuteHeslo"
+            class="forgot-password"
+            >Zapomenuté heslo?</a
+          >
+        </div>
+        <input
+          name="__RequestVerificationToken"
+          type="hidden"
+          value="CfDJ8I_9FnGAjtVNmNtBcQKOBKoUgruNuD9HVNGTyZCKJATKybmrR9qlRq-h8FTaZlfx4MtVY10vINVL3za22tVjhV_Zq25In_8nS5ryvNQVc3ReFTSw3K0VMyKanfKJ5ry628mNpqh6AXp3YkNbod20c_k"
+        />
+      </form>
+    </div>
+    <section id="container">
+      <!--HEADER-->
+      <header>
+        <section class="logo">
+          <a href="/"
+            ><img src="./images/logo.svg" alt="logo" class="logo"
+          /></a>
+        </section>
+        <nav>
+          <ul class="nav-bar">
+            <a class="hover-animation" href="/">Domů</a>
+            <a class="hover-animation" href="/home/gallery.html">Galerie</a>
+            <button class="primary-button hover-animation login-button">
+              Přihlásit se
+            </button>
+          </ul>
+        </nav>
+        <i class="fa-solid fa-bars burger-menu-icon"></i>
+      </header>
+      <!--MAIN-->
+      <main>
+        <h2>Shrnutí objednávky</h2>
+        <form>
+          <div class="form-step">
+            <section class="step-title">
+              <p>Software</p>
+              <p>1/4</p>
+            </section>
+            <section class="form-fields">
+              <section class="form-row">
+                <article class="form-field">
+                  <label for="monthSlider"
+                    >Zpětné zálohování:
+                    <span id="monthValue">12</span>
+                    měsíců</label
+                  >
+                  <input
+                    type="range"
+                    min="12"
+                    max="126"
+                    value="12"
+                    class="slider"
+                    id="monthSlider"
+                  />
+                </article>
+              </section>
+              <section class="form-row">
+                <label for="number">Export do Excelu:</label>
+              </section>
+              <section class="form-row">
+                <article class="form-field">
+                  <input
+                    id="excel-ne"
+                    type="radio"
+                    name="excel"
+                    required
+                    checked
+                  />
+                  <label for="excel-ne" class="radio-card">
+                    <p>Ne</p>
+                  </label>
+                </article>
+                <article class="form-field">
+                  <input id="excel-ano" type="radio" name="excel" required />
+                  <label for="excel-ano" class="radio-card">
+                    <p>Ano</p>
+                  </label>
+                </article>
+              </section>
+              <section class="form-row">
+                <label for="number">Emailový reporting:</label>
+              </section>
+              <section class="form-row">
+                <article class="form-field">
+                  <input
+                    id="reporting-ne"
+                    type="radio"
+                    name="reporting"
+                    required
+                    checked
+                  />
+                  <label for="reporting-ne" class="radio-card">
+                    <p>Ne</p>
+                  </label>
+                </article>
+                <article class="form-field">
+                  <input
+                    id="reporting-ano"
+                    type="radio"
+                    name="reporting"
+                    required
+                  />
+                  <label for="reporting-ano" class="radio-card">
+                    <p>Ano</p>
+                  </label>
+                </article>
+              </section>
+              <section class="form-row">
+                <label for="number">Seskupování záznamů:</label>
+              </section>
+              <section class="form-row">
+                <article class="form-field">
+                  <input
+                    id="seskupovani-ne"
+                    type="radio"
+                    name="seskupovani"
+                    required
+                    checked
+                  />
+                  <label for="seskupovani-ne" class="radio-card">
+                    <p>Ne</p>
+                  </label>
+                </article>
+                <article class="form-field">
+                  <input
+                    id="seskupovani-ano"
+                    type="radio"
+                    name="seskupovani"
+                    required
+                  />
+                  <label for="seskupovani-ano" class="radio-card">
+                    <p>Ano</p>
+                  </label>
+                </article>
+              </section>
+              <section class="form-row">
+                <label for="number">Rozšířený filtr:</label>
+              </section>
+              <section class="form-row">
+                <article class="form-field">
+                  <input
+                    id="filtr-ne"
+                    type="radio"
+                    name="filtr"
+                    required
+                    checked
+                  />
+                  <label for="filtr-ne" class="radio-card">
+                    <p>Ne</p>
+                  </label>
+                </article>
+                <article class="form-field">
+                  <input id="filtr-ano" type="radio" name="filtr" required />
+                  <label for="filtr-ano" class="radio-card">
+                    <p>Ano</p>
+                  </label>
+                </article>
+              </section>
+              <section class="form-row">
+                <label for="number">Sklady a inventury:</label>
+              </section>
+              <section class="form-row">
+                <article class="form-field">
+                  <input
+                    id="sklady-ne"
+                    type="radio"
+                    name="sklady"
+                    required
+                    checked
+                  />
+                  <label for="sklady-ne" class="radio-card">
+                    <p>Ne</p>
+                  </label>
+                </article>
+                <article class="form-field">
+                  <input id="sklady-ano" type="radio" name="sklady" required />
+                  <label for="sklady-ano" class="radio-card">
+                    <p>Ano</p>
+                  </label>
+                </article>
+              </section>
+              <section class="form-row">
+                <label for="number">Cizí měny:</label>
+              </section>
+              <section class="form-row">
+                <article class="form-field">
+                  <input
+                    id="meny-ne"
+                    type="radio"
+                    name="meny"
+                    required
+                    checked
+                  />
+                  <label for="meny-ne" class="radio-card">
+                    <p>Ne</p>
+                  </label>
+                </article>
+                <article class="form-field">
+                  <input id="meny-ano" type="radio" name="meny" required />
+                  <label for="meny-ano" class="radio-card">
+                    <p>Ano</p>
+                  </label>
+                </article>
+              </section>
+            </section>
+          </div>
+          <div class="form-step">
+            <section class="step-title">
+              <p>Hardware</p>
+              <p>3/5</p>
+            </section>
+            <section class="form-row">
+              <article class="form-field">
+                <input
+                  id="no-hardware"
+                  type="radio"
+                  name="typ-pokladny"
+                  required
+                  checked
+                />
+                <label for="no-hardware" class="radio-card">
+                  <p>Žádný</p>
+                </label>
+              </article>
+              <article class="form-field">
+                <input id="elo" type="radio" name="typ-pokladny" required />
+                <label for="elo" class="radio-card">
+                  <p>Pokladna ELO</p>
+                </label>
+              </article>
+            </section>
+            <section class="form-row">
+              <article class="form-field">
+                <input
+                  id="6-tablet"
+                  type="radio"
+                  name="typ-pokladny"
+                  required
+                />
+                <label for="6-tablet" class="radio-card">
+                  <p>6" tablet</p>
+                </label>
+              </article>
+              <article class="form-field">
+                <input
+                  id="10-tablet"
+                  type="radio"
+                  name="typ-pokladny"
+                  required
+                />
+                <label for="10-tablet" class="radio-card">
+                  <p>10" tablet</p>
+                </label>
+              </article>
+            </section>
+          </div>
+          <div class="form-step">
+            <section class="step-title">
+              <p>Množství</p>
+              <p>4/5</p>
+            </section>
+            <section class="form-row">
+              <article class="form-field">
+                <label for="number">Počet kusů hardwaru (max. 20)</label>
+                <input
+                  id="number"
+                  type="number"
+                  required
+                  max="20"
+                  min="0"
+                  value="0"
+                />
+              </article>
+            </section>
+          </div>
+          <div class="form-step">
+            <section class="step-title">
+              <p>Osobní údaje</p>
+              <p>4/5</p>
+            </section>
+            <section class="form-fields">
+              <section class="form-row">
+                <article class="form-field">
+                  <label for="name">Jméno:</label>
+                  <input id="name" type="text" required />
+                </article>
+                <article class="form-field">
+                  <label for="last-name">Přijmení:</label>
+                  <input id="last-name" type="text" required />
+                </article>
+              </section>
+              <section class="form-row">
+                <article class="form-field">
+                  <label for="phone">Telefon:</label>
+                  <input id="phone" type="tel" required />
+                </article>
+              </section>
+              <section class="form-row">
+                <article class="form-field">
+                  <label for="email">Email:</label>
+                  <input id="email" type="email" required />
+                </article>
+              </section>
+              <section class="form-row">
+                <article class="form-field">
+                  <label for="address">Ulice a číslo popisné:</label>
+                  <input id="address" type="text" required />
+                </article>
+              </section>
+              <section class="form-row">
+                <article class="form-field">
+                  <label for="city">Město:</label>
+                  <input id="city" type="text" required />
+                </article>
+                <article class="form-field">
+                  <label for="postal-code">PSČ:</label>
+                  <input id="postal-code" type="text" required />
+                </article>
+              </section>
+            </section>
+          </div>
+          <div class="form-step">
+            <section class="step-title">
+              <p>Platba kartou</p>
+              <p>4/4</p>
+            </section>
+            <p>
+              V tuto chvíli nabízíme pouze platbu kartou. Nevyhovuje-li Vám
+              tento způsob platby, kontaktujte nás a domluvíme se individuálně.
+            </p>
+            <button type="submit" class="primary-button hover-animation">
+              Přejít k platbě
+            </button>
+          </div>
+        </form>
+      </main>
+      <!--FOOTER-->
+      <footer>
+        <article class="company">
+          <section class="logo">
+            <a href="/">
+              <img src="/home/images/logo.svg" alt="logo" id="footerLogo" />
+            </a>
+          </section>
+          <p>Spolehlivá pokladna do kapsy</p>
+        </article>
+        <article class="links">
+          <p><b>Důležité odkazy</b></p>
+          <a href="/home/koupit.html">Koupit</a>
+          <a class="login-button">Přihlásit se</a>
+          <a href="">Obchodní podmínky</a>
+          <a href="">Ochrana osobních údajů</a>
+        </article>
+        <article class="contact">
+          <p><b>Kontakt</b></p>
+          <a href="tel:+420602200655">Tel: +420 602 200 655</a>
+          <a href="mailto:piccolo@datona.cz">Email: piccolo@datona.cz</a>
+          <a href="https://maps.app.goo.gl/zGwgqbxN4EhgyEYY7">
+            Adresa: Podolská 401/50, 147 00, Praha 4, Podolí
+          </a>
+        </article>
+      </footer>
+    </section>
+    <script src="/home/scripts/script.js"></script>
+    <script src="/home/scripts/form.js"></script>
+  </body>
+</html>

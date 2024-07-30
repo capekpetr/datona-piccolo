@@ -1,0 +1,123 @@
+main {
+  padding: 30px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+form {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-progress {
+  overflow: hidden;
+  background-color: #0a369d14;
+  border-radius: 4px;
+  height: 12px;
+  width: 250px;
+}
+
+.form-bar {
+  background-color: var(--primary);
+  width: 25%;
+  height: 100%;
+}
+
+.form-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+div.form-step {
+  width: 100%;
+  max-width: 550px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 20px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  border: solid 2px var(--primary);
+}
+
+.step-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.step-title p {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.form-fields {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.form-field {
+  width: 100%;
+  display: flex;
+  gap: 3px;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.radio-card {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: solid 1px var(--text);
+  transition: 0.2s ease-in-out;
+}
+
+input[type="range"] {
+  accent-color: var(--primary);
+}
+
+input[type="radio"]:checked + .radio-card {
+  border-color: var(--primary);
+  border-width: 2px;
+}
+
+input[type="radio"]:checked + .radio-card :nth-child(1) {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+#monthValue {
+  font-weight: bold;
+}
