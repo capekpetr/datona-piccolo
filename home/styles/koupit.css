@@ -151,7 +151,6 @@ section#calculation {
 }
 
 section#calculation-box {
-  max-width: 900px;
   width: 100%;
   display: flex;
   gap: 10px;
