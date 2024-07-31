@@ -8,16 +8,22 @@ li {
   gap: 7px;
 }
 
-form.plans {
+.form-section {
   padding: 75px 0px;
-  width: 100%;
-  text-align: center;
-  padding-bottom: 10px;
   display: flex;
+  width: 100%;
+  gap: 30px;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 50px;
+}
+
+section#hardware,
+section#quantity {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 25px;
+  background-color: white;
+  border-radius: 12px;
 }
 
 section#plans-table {
@@ -71,6 +77,23 @@ article.plan button {
   font-size: 3rem;
   color: var(--primary);
   font-weight: 500;
+}
+
+.hardware-option {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hardware-option p {
+  max-width: 350px;
+  width: 100%;
+}
+
+.hardware-image {
+  height: 100px;
+  width: 100px;
 }
 
 @media (max-width: 800px) {
