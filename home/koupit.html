@@ -259,12 +259,14 @@
             </h2>
             <section id="hardware-box">
               <article class="hardware-option">
-                <img
-                  class="hardware-image"
-                  src="https://www.datona.cz/sites/default/files/ELO_15E2-500-3.jpg"
-                  alt=""
-                />
-                <h3>Pokladna Elo</h3>
+                <section class="image-and-name">
+                  <img
+                    class="hardware-image"
+                    src="https://www.datona.cz/sites/default/files/ELO_15E2-500-3.jpg"
+                    alt=""
+                  />
+                  <h3>Pokladna Elo</h3>
+                </section>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Exercitationem, quo?
@@ -273,28 +275,89 @@
               </article>
               <hr />
               <article class="hardware-option">
-                <img
-                  class="hardware-image"
-                  src="https://www.datona.cz/sites/default/files/ELO_15E2-500-3.jpg"
-                  alt=""
-                />
-                <h3>Elo</h3>
+                <section class="image-and-name">
+                  <img
+                    class="hardware-image"
+                    src="https://www.datona.cz/sites/default/files/ELO_15E2-500-3.jpg"
+                    alt=""
+                  />
+                  <h3>6" tablet</h3>
+                </section>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Exercitationem, quo?
+                </p>
+                <button class="primary-button hover-animation">Vybrat</button>
+              </article>
+              <hr />
+              <article class="hardware-option">
+                <section class="image-and-name">
+                  <img
+                    class="hardware-image"
+                    src="https://www.datona.cz/sites/default/files/ELO_15E2-500-3.jpg"
+                    alt=""
+                  />
+                  <h3>10" tablet</h3>
+                </section>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Exercitationem, quo?
+                </p>
+                <button class="primary-button hover-animation">Vybrat</button>
+              </article>
+              <hr />
+              <article class="hardware-option">
+                <section class="image-and-name">
+                  <img
+                    class="hardware-image"
+                    src="https://www.datona.cz/sites/default/files/ELO_15E2-500-3.jpg"
+                    alt=""
+                  />
+                  <h3>Mám vlastní zařízení</h3>
+                </section>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Exercitationem, quo?
+                </p>
                 <button class="primary-button hover-animation">Vybrat</button>
               </article>
             </section>
           </section>
           <section id="calculation">
-            <h2>Kalkulace</h2>
-            <section class="calculation-box">
-              <label for="number">Počet kusů hardwaru (max. 20)</label>
-              <input
-                id="number"
-                type="number"
-                required
-                max="20"
-                min="0"
-                value="0"
-              />
+            <h2>
+              Kalkulace
+              <span class="text-highlight">ceny</span>
+            </h2>
+            <section id="calculation-box">
+              <article class="calculation-field">
+                <p><b>Zadejte množství:</b></p>
+                <input
+                  id="number"
+                  type="number"
+                  required
+                  max="20"
+                  min="1"
+                  value="1"
+                />
+              </article>
+              <hr />
+              <article class="calculation-field">
+                <p>Jednorázová cena za pokladnu:</p>
+                <p>999</p>
+              </article>
+              <article class="calculation-field">
+                <p>Cena licence měsíčně:</p>
+                <p>999</p>
+              </article>
+              <article class="calculation-field">
+                <p>Celkem nyní k úhradě:</p>
+                <p>999</p>
+              </article>
+              <section id="continue-field">
+                <button class="primary-button hover-animation">
+                  Pokračovat
+                </button>
+              </section>
             </section>
           </section>
         </form>

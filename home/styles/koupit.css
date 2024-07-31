@@ -95,14 +95,19 @@ section#hardware {
 }
 
 section#hardware-box {
-  padding: 25px;
+  padding: 10px 30px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   background-color: white;
   border-radius: 12px;
 }
 
 .hardware-option {
+  margin-top: 5px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -114,28 +119,56 @@ section#hardware-box {
   width: 100%;
 }
 
+.image-and-name {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
 .hardware-image {
   height: 100px;
   width: 100px;
 }
 
-/* ================================QUANTITY===============================*/
+/* ================================CALCULATION===============================*/
 
 section#calculation {
   width: 100%;
   display: flex;
-  gap: 30px;
+  gap: 50px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 section#calculation-box {
-  padding: 25px;
+  max-width: 900px;
   width: 100%;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  background-color: white;
-  border-radius: 12px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+article.calculation-field {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section#continue-field {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+input[type="number"] {
+  width: 75px;
 }
 
 /* ================================RESPONSIVITY===============================*/
