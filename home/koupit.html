@@ -152,7 +152,7 @@
       <!--MAIN-->
       <main>
         <form action="">
-          <section class="form-section" id="plans">
+          <section id="plans">
             <h2>
               Vyberte si
               <span class="text-highlight">licenci</span>
@@ -163,7 +163,7 @@
                 <span>
                   <h3>PiCCOLO <span class="text-highlight">Classic</span></h3>
                   <p class="price">170 Kč</p>
-                  <ul class="plan-list">
+                  <ul class="features-list">
                     <li>
                       <i class="fa-regular fa-circle-check"></i>
                       <p>10 000 účtenek za rok</p>
@@ -180,7 +180,7 @@
                 <span>
                   <h3>PiCCOLO <span class="text-highlight">PRO</span></h3>
                   <p class="price">490 Kč</p>
-                  <ul class="plan-list">
+                  <ul class="features-list">
                     <li>
                       <i class="fa-regular fa-circle-check"></i>
                       <p>Neomezeně účtenek</p>
@@ -221,7 +221,7 @@
                 <span>
                   <h3>PiCCOLO <span class="text-highlight">Plus</span></h3>
                   <p class="price">250 Kč</p>
-                  <ul class="plan-list">
+                  <ul class="features-list">
                     <li>
                       <i class="fa-regular fa-circle-check"></i>
                       <p>Neomezeně účtenek</p>
@@ -252,12 +252,12 @@
               </article>
             </section>
           </section>
-          <section class="form-section" id="hardware">
+          <section id="hardware">
             <h2>
               Vyberte si
               <span class="text-highlight">pokladnu</span>
             </h2>
-            <section id="hardware-selection">
+            <section id="hardware-box">
               <article class="hardware-option">
                 <img
                   class="hardware-image"
@@ -283,11 +283,19 @@
               </article>
             </section>
           </section>
-          <section class="form-section" id="quantity">
-            <h2>
-              Vyberte si
-              <span class="text-highlight">množství</span>
-            </h2>
+          <section id="calculation">
+            <h2>Kalkulace</h2>
+            <section class="calculation-box">
+              <label for="number">Počet kusů hardwaru (max. 20)</label>
+              <input
+                id="number"
+                type="number"
+                required
+                max="20"
+                min="0"
+                value="0"
+              />
+            </section>
           </section>
         </form>
       </main>

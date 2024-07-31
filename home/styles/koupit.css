@@ -1,3 +1,5 @@
+/* ================================PRESET===============================*/
+
 i {
   font-size: 1.2rem;
   color: #0a369d;
@@ -8,22 +10,25 @@ li {
   gap: 7px;
 }
 
-.form-section {
+form {
   padding: 75px 0px;
   display: flex;
-  width: 100%;
-  gap: 30px;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 75px;
+  width: 100%;
 }
 
-section#hardware,
-section#quantity {
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  padding: 25px;
-  background-color: white;
-  border-radius: 12px;
+/* ================================LICENCE===============================*/
+
+section#plans {
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 section#plans-table {
@@ -60,7 +65,7 @@ article.plan > span {
   gap: 30px;
 }
 
-ul.plan-list {
+ul.features-list {
   gap: 10px;
   text-align: center;
   display: flex;
@@ -79,6 +84,24 @@ article.plan button {
   font-weight: 500;
 }
 
+/* ================================HARDWARE===============================*/
+section#hardware {
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section#hardware-box {
+  padding: 25px;
+  width: 100%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: white;
+  border-radius: 12px;
+}
+
 .hardware-option {
   width: 100%;
   display: flex;
@@ -95,6 +118,27 @@ article.plan button {
   height: 100px;
   width: 100px;
 }
+
+/* ================================QUANTITY===============================*/
+
+section#calculation {
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section#calculation-box {
+  padding: 25px;
+  width: 100%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: white;
+  border-radius: 12px;
+}
+
+/* ================================RESPONSIVITY===============================*/
 
 @media (max-width: 800px) {
   section#plans-table {
