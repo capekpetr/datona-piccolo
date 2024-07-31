@@ -109,8 +109,9 @@ section#hardware-box {
 .hardware-option {
   margin-top: 5px;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  justify-content: center;
   align-items: center;
 }
 
@@ -119,10 +120,17 @@ section#hardware-box {
   width: 100%;
 }
 
+.hardware-price-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .image-and-name {
   display: flex;
   gap: 30px;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 }
 
@@ -136,7 +144,7 @@ section#hardware-box {
 section#calculation {
   width: 100%;
   display: flex;
-  gap: 50px;
+  gap: 30px;
   flex-direction: column;
   justify-content: center;
   align-items: center;

@@ -89,6 +89,7 @@ b {
 }
 
 .primary-button {
+  width: fit-content;
   cursor: pointer;
   box-shadow: var(--shadow);
   border: none;
