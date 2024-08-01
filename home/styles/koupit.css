@@ -131,6 +131,10 @@ span.pricing-wrapper p {
   color: var(--primary);
 }
 
+section#plans-table label {
+  width: 100%;
+}
+
 section#plans h2 {
   font-size: 2.5rem;
 }

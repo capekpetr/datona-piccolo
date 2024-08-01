@@ -89,7 +89,8 @@ b {
 }
 
 .primary-button {
-  width: fit-content;
+  width: auto;
+  text-align: center;
   cursor: pointer;
   box-shadow: var(--shadow);
   border: none;
@@ -102,6 +103,8 @@ b {
 }
 
 .secondary-button {
+  width: auto;
+  text-align: center;
   cursor: pointer;
   box-shadow: var(--shadow);
   border: solid 2px var(--primary);
