@@ -51,6 +51,7 @@
   margin: 75px 0px;
   border-radius: 10px;
   box-shadow: var(--shadow);
+  border: solid 1px lightgray;
   padding: 30px;
   box-sizing: border-box;
   gap: 30px;
@@ -119,6 +120,7 @@
 
 .card {
   box-shadow: var(--shadow);
+  border: solid 1px lightgray;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -174,6 +176,7 @@
   padding: 30px;
   border-radius: 12px;
   box-shadow: var(--shadow);
+  border: solid 1px lightgray;
 }
 
 .person-image {

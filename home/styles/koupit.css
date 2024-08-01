@@ -11,7 +11,7 @@ li {
 }
 
 form {
-  padding: 75px 0px;
+  padding: 50px 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,6 +25,34 @@ input[type="radio"] {
 }
 
 /* ================================SWITCH===============================*/
+
+#switch-section {
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: solid 1px lightgray;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+label[for="yearly"],
+label[for="monthly"] {
+  border-radius: 30px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  color: rgb(183, 183, 183);
+}
+
+#yearly:checked ~ label[for="yearly"],
+#monthly:checked ~ label[for="monthly"] {
+  color: white;
+  background-color: var(--primary);
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
 
 /* ================================LICENCE===============================*/
 
@@ -53,13 +81,14 @@ article.plan {
   justify-content: space-between;
   align-items: center;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border: solid 1px lightgray;
   padding: 25px;
   background-color: white;
   border-radius: 12px;
 }
 
 article#pro-plan {
-  transform: scale(1.05);
+  transform: scale(1);
   border: solid 2px #0a369d;
 }
 
@@ -90,6 +119,10 @@ article.plan button {
   font-weight: 500;
 }
 
+section#plans h2 {
+  font-size: 2.5rem;
+}
+
 /* ================================HARDWARE===============================*/
 section#hardware {
   width: 100%;
@@ -108,6 +141,7 @@ section#hardware-box {
   justify-content: center;
   align-items: center;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border: solid 1px lightgray;
   background-color: white;
   border-radius: 12px;
 }

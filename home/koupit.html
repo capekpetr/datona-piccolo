@@ -157,16 +157,21 @@
               Vyberte si
               <span class="text-highlight">licenci</span>
             </h2>
-            <section>Switch</section>
+            <section id="switch-section">
+              <input type="radio" name="switch" id="yearly" checked required />
+              <label for="yearly">1 Rok (sleva 20%)</label>
+              <input type="radio" name="switch" id="monthly" required />
+              <label for="monthly">1 Měsíc</label>
+            </section>
             <section id="plans-table">
               <article class="plan">
                 <span>
                   <h3>PiCCOLO <span class="text-highlight">Classic</span></h3>
-                  <p class="price">170 Kč</p>
+                  <p id="classic-price" class="price">135 Kč</p>
                   <ul class="features-list">
                     <li>
                       <i class="fa-regular fa-circle-check"></i>
-                      <p>10 000 účtenek za rok</p>
+                      <p>1000 účtenek měsíčně</p>
                     </li>
                     <li>
                       <i class="fa-regular fa-circle-check"></i>
@@ -179,7 +184,7 @@
               <article class="plan" id="pro-plan">
                 <span>
                   <h3>PiCCOLO <span class="text-highlight">PRO</span></h3>
-                  <p class="price">490 Kč</p>
+                  <p id="pro-price" class="price">390 Kč</p>
                   <ul class="features-list">
                     <li>
                       <i class="fa-regular fa-circle-check"></i>
@@ -220,7 +225,7 @@
               <article class="plan">
                 <span>
                   <h3>PiCCOLO <span class="text-highlight">Plus</span></h3>
-                  <p class="price">250 Kč</p>
+                  <p id="plus-price" class="price">200 Kč</p>
                   <ul class="features-list">
                     <li>
                       <i class="fa-regular fa-circle-check"></i>
@@ -354,15 +359,24 @@
               </article>
               <hr />
               <article class="calculation-field">
-                <p>Jednorázová cena za pokladnu:</p>
+                <p>Jednorázová cena za pokladnu (bez DPH):</p>
                 <p>999</p>
               </article>
               <article class="calculation-field">
-                <p>Cena licence měsíčně:</p>
+                <p>Jednorázová cena za pokladnu (včetně DPH):</p>
                 <p>999</p>
               </article>
               <article class="calculation-field">
-                <p><b>Celkem nyní k úhradě:</b></p>
+                <p>Cena licence měsíčně (bez DPH):</p>
+                <p>999</p>
+              </article>
+              <article class="calculation-field">
+                <p>Cena licence měsíčně (včetně DPH):</p>
+                <p>999</p>
+              </article>
+              <hr />
+              <article class="calculation-field">
+                <p><b>Celková cena s DPH:</b></p>
                 <p><b>999</b></p>
               </article>
               <section id="continue-field">
@@ -402,5 +416,6 @@
       </footer>
     </section>
     <script src="/home/scripts/script.js"></script>
+    <script src="/home/scripts/koupit.js"></script>
   </body>
 </html>
