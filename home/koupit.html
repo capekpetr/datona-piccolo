@@ -183,6 +183,7 @@
                   </ul>
                 </span>
                 <input
+                  data-price="135"
                   class="form-input"
                   type="radio"
                   name="licence"
@@ -236,6 +237,7 @@
                   </ul>
                 </span>
                 <input
+                  data-price="390"
                   class="form-input"
                   type="radio"
                   name="licence"
@@ -281,6 +283,7 @@
                   </ul>
                 </span>
                 <input
+                  data-price="200"
                   class="form-input"
                   type="radio"
                   name="licence"
@@ -315,6 +318,7 @@
                 <section class="hardware-price-wrapper">
                   <p><b>17 900 Kč</b></p>
                   <input
+                    data-price="17900"
                     class="hardware-form-input"
                     type="radio"
                     name="hardware"
@@ -343,6 +347,7 @@
                 <section class="hardware-price-wrapper">
                   <p><b>9 800 Kč</b></p>
                   <input
+                    data-price="9800"
                     class="hardware-form-input"
                     type="radio"
                     name="hardware"
@@ -371,6 +376,7 @@
                 <section class="hardware-price-wrapper">
                   <p><b>8 600 Kč</b></p>
                   <input
+                    data-price="8600"
                     class="hardware-form-input"
                     type="radio"
                     name="hardware"
@@ -399,6 +405,7 @@
                 <section class="hardware-price-wrapper">
                   <p><b>Zdarma</b></p>
                   <input
+                    data-price="0"
                     class="hardware-form-input"
                     type="radio"
                     name="hardware"
@@ -421,7 +428,7 @@
               <article class="calculation-field">
                 <p><b>Zadejte množství:</b></p>
                 <input
-                  id="number"
+                  id="order-quantity"
                   type="number"
                   required
                   max="20"
@@ -432,20 +439,20 @@
               <hr />
               <article class="calculation-field">
                 <p>Cena licence:</p>
-                <p>999 Kč</p>
+                <p id="licence-price">Chybí údaje</p>
               </article>
               <article class="calculation-field">
                 <p>Cena za pokladnu:</p>
-                <p>999 Kč</p>
+                <p id="hardware-price">Chybí údaje</p>
               </article>
               <article class="calculation-field">
                 <p>Celková cena bez DPH:</p>
-                <p>999 Kč</p>
+                <p id="total-no-tax">Chybí údaje</p>
               </article>
               <hr />
               <article class="calculation-field">
                 <p><b>Celková cena s DPH:</b></p>
-                <p><b>999 Kč</b></p>
+                <p id="total-tax"><b>Chybí údaje</b></p>
               </article>
               <section id="continue-field">
                 <button class="primary-button hover-animation">

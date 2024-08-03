@@ -43,7 +43,7 @@ label[for="monthly"] {
   cursor: pointer;
   font-weight: 600;
   font-size: 16px;
-  color: rgb(183, 183, 183);
+  color: rgb(161, 161, 161);
 }
 
 #yearly:checked ~ label[for="yearly"],
