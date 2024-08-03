@@ -234,6 +234,10 @@ input[type="number"] {
   width: 75px;
 }
 
+#total-with-tax {
+  font-weight: bold;
+}
+
 /* ================================RESPONSIVITY===============================*/
 
 @media (max-width: 800px) {
