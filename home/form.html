@@ -149,254 +149,11 @@
       </header>
       <!--MAIN-->
       <main>
-        <h2>Shrnutí objednávky</h2>
+        <h2>Dokončení <span class="text-highlight">objednávky</span></h2>
         <form>
           <div class="form-step">
             <section class="step-title">
-              <p>Software</p>
-              <p>1/4</p>
-            </section>
-            <section class="form-fields">
-              <section class="form-row">
-                <article class="form-field">
-                  <label for="monthSlider"
-                    >Zpětné zálohování:
-                    <span id="monthValue">12</span>
-                    měsíců</label
-                  >
-                  <input
-                    type="range"
-                    min="12"
-                    max="126"
-                    value="12"
-                    class="slider"
-                    id="monthSlider"
-                  />
-                </article>
-              </section>
-              <section class="form-row">
-                <label for="number">Export do Excelu:</label>
-              </section>
-              <section class="form-row">
-                <article class="form-field">
-                  <input
-                    id="excel-ne"
-                    type="radio"
-                    name="excel"
-                    required
-                    checked
-                  />
-                  <label for="excel-ne" class="radio-card">
-                    <p>Ne</p>
-                  </label>
-                </article>
-                <article class="form-field">
-                  <input id="excel-ano" type="radio" name="excel" required />
-                  <label for="excel-ano" class="radio-card">
-                    <p>Ano</p>
-                  </label>
-                </article>
-              </section>
-              <section class="form-row">
-                <label for="number">Emailový reporting:</label>
-              </section>
-              <section class="form-row">
-                <article class="form-field">
-                  <input
-                    id="reporting-ne"
-                    type="radio"
-                    name="reporting"
-                    required
-                    checked
-                  />
-                  <label for="reporting-ne" class="radio-card">
-                    <p>Ne</p>
-                  </label>
-                </article>
-                <article class="form-field">
-                  <input
-                    id="reporting-ano"
-                    type="radio"
-                    name="reporting"
-                    required
-                  />
-                  <label for="reporting-ano" class="radio-card">
-                    <p>Ano</p>
-                  </label>
-                </article>
-              </section>
-              <section class="form-row">
-                <label for="number">Seskupování záznamů:</label>
-              </section>
-              <section class="form-row">
-                <article class="form-field">
-                  <input
-                    id="seskupovani-ne"
-                    type="radio"
-                    name="seskupovani"
-                    required
-                    checked
-                  />
-                  <label for="seskupovani-ne" class="radio-card">
-                    <p>Ne</p>
-                  </label>
-                </article>
-                <article class="form-field">
-                  <input
-                    id="seskupovani-ano"
-                    type="radio"
-                    name="seskupovani"
-                    required
-                  />
-                  <label for="seskupovani-ano" class="radio-card">
-                    <p>Ano</p>
-                  </label>
-                </article>
-              </section>
-              <section class="form-row">
-                <label for="number">Rozšířený filtr:</label>
-              </section>
-              <section class="form-row">
-                <article class="form-field">
-                  <input
-                    id="filtr-ne"
-                    type="radio"
-                    name="filtr"
-                    required
-                    checked
-                  />
-                  <label for="filtr-ne" class="radio-card">
-                    <p>Ne</p>
-                  </label>
-                </article>
-                <article class="form-field">
-                  <input id="filtr-ano" type="radio" name="filtr" required />
-                  <label for="filtr-ano" class="radio-card">
-                    <p>Ano</p>
-                  </label>
-                </article>
-              </section>
-              <section class="form-row">
-                <label for="number">Sklady a inventury:</label>
-              </section>
-              <section class="form-row">
-                <article class="form-field">
-                  <input
-                    id="sklady-ne"
-                    type="radio"
-                    name="sklady"
-                    required
-                    checked
-                  />
-                  <label for="sklady-ne" class="radio-card">
-                    <p>Ne</p>
-                  </label>
-                </article>
-                <article class="form-field">
-                  <input id="sklady-ano" type="radio" name="sklady" required />
-                  <label for="sklady-ano" class="radio-card">
-                    <p>Ano</p>
-                  </label>
-                </article>
-              </section>
-              <section class="form-row">
-                <label for="number">Cizí měny:</label>
-              </section>
-              <section class="form-row">
-                <article class="form-field">
-                  <input
-                    id="meny-ne"
-                    type="radio"
-                    name="meny"
-                    required
-                    checked
-                  />
-                  <label for="meny-ne" class="radio-card">
-                    <p>Ne</p>
-                  </label>
-                </article>
-                <article class="form-field">
-                  <input id="meny-ano" type="radio" name="meny" required />
-                  <label for="meny-ano" class="radio-card">
-                    <p>Ano</p>
-                  </label>
-                </article>
-              </section>
-            </section>
-          </div>
-          <div class="form-step">
-            <section class="step-title">
-              <p>Hardware</p>
-              <p>3/5</p>
-            </section>
-            <section class="form-row">
-              <article class="form-field">
-                <input
-                  id="no-hardware"
-                  type="radio"
-                  name="typ-pokladny"
-                  required
-                  checked
-                />
-                <label for="no-hardware" class="radio-card">
-                  <p>Žádný</p>
-                </label>
-              </article>
-              <article class="form-field">
-                <input id="elo" type="radio" name="typ-pokladny" required />
-                <label for="elo" class="radio-card">
-                  <p>Pokladna ELO</p>
-                </label>
-              </article>
-            </section>
-            <section class="form-row">
-              <article class="form-field">
-                <input
-                  id="6-tablet"
-                  type="radio"
-                  name="typ-pokladny"
-                  required
-                />
-                <label for="6-tablet" class="radio-card">
-                  <p>6" tablet</p>
-                </label>
-              </article>
-              <article class="form-field">
-                <input
-                  id="10-tablet"
-                  type="radio"
-                  name="typ-pokladny"
-                  required
-                />
-                <label for="10-tablet" class="radio-card">
-                  <p>10" tablet</p>
-                </label>
-              </article>
-            </section>
-          </div>
-          <div class="form-step">
-            <section class="step-title">
-              <p>Množství</p>
-              <p>4/5</p>
-            </section>
-            <section class="form-row">
-              <article class="form-field">
-                <label for="number">Počet kusů hardwaru (max. 20)</label>
-                <input
-                  id="number"
-                  type="number"
-                  required
-                  max="20"
-                  min="0"
-                  value="0"
-                />
-              </article>
-            </section>
-          </div>
-          <div class="form-step">
-            <section class="step-title">
               <p>Osobní údaje</p>
-              <p>4/5</p>
             </section>
             <section class="form-fields">
               <section class="form-row">
@@ -441,16 +198,19 @@
           </div>
           <div class="form-step">
             <section class="step-title">
-              <p>Platba kartou</p>
-              <p>4/4</p>
+              <p>Platební brána</p>
+              <img id="webpay" src="/home/images/GPwebpay-logo.png" alt="" />
             </section>
             <p>
-              V tuto chvíli nabízíme pouze platbu kartou. Nevyhovuje-li Vám
-              tento způsob platby, kontaktujte nás a domluvíme se individuálně.
+              Odesláním objednávky souhlasíte s našimi obchodními podmínkami a
+              zásadami zpracování osobních údajů
             </p>
-            <button type="submit" class="primary-button hover-animation">
-              Přejít k platbě
-            </button>
+            <section id="form-payment-wrapper">
+              <p id="form-price">Celkem: 6 542 Kč</p>
+              <button type="submit" class="primary-button hover-animation">
+                Přejít k platbě
+              </button>
+            </section>
           </div>
         </form>
       </main>

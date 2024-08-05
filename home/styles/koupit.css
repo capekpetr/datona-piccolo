@@ -241,6 +241,28 @@ input[type="number"] {
 
 /* ================================RESPONSIVITY===============================*/
 
+@media (max-width: 1200px) {
+  .hardware-option {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;
+  }
+
+  .image-and-name {
+    grid-row: span 2;
+  }
+
+  .hardware-price-wrapper {
+    justify-content: end;
+    gap: 30px;
+  }
+
+  .hardware-option p {
+    justify-self: end;
+    width: auto;
+  }
+}
+
 @media (max-width: 800px) {
   section#plans-table {
     width: auto;
@@ -258,12 +280,34 @@ input[type="number"] {
   }
 }
 
-@media (max-width: 480px) {
-  section#plans-table {
-    width: 100%;
+@media (max-width: 850px) {
+  .hardware-option {
+    justify-items: start;
+    align-items: center;
+    text-align: center;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
-  article.plan {
-    padding: 30px 25px;
+
+  .hardware-price-wrapper {
+    justify-content: end;
+  }
+
+  .hardware-option p {
+    justify-self: end;
+    width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .hardware-price-wrapper {
+    justify-content: space-between;
+  }
+
+  .hardware-option p {
+    justify-self: center;
+    width: auto;
   }
 }
 

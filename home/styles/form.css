@@ -121,3 +121,18 @@ input[type="radio"]:checked + .radio-card :nth-child(1) {
 #monthValue {
   font-weight: bold;
 }
+
+img#webpay {
+  width: 120px;
+}
+
+#form-payment-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#form-price {
+  font-weight: bold;
+}
