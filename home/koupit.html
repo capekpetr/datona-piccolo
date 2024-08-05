@@ -154,314 +154,394 @@
       <!--MAIN-->
       <main>
         <form action="">
-          <section id="plans">
-            <h2>
-              Vyberte si
-              <span class="text-highlight">licenci</span>
-            </h2>
-            <section id="switch-section">
-              <input type="radio" name="switch" id="yearly" checked required />
-              <label for="yearly">Ročně (sleva 20%)</label>
-              <input type="radio" name="switch" id="monthly" required />
-              <label for="monthly">Měsíčně</label>
-            </section>
-            <section id="plans-table">
-              <article class="plan">
-                <span>
-                  <h3>PiCCOLO <span class="text-highlight">Classic</span></h3>
-                  <span class="pricing-wrapper"
-                    ><p id="classic-price" class="price">XXX Kč</p>
-                    <p>Za měsíc</p>
-                  </span>
-                  <ul class="features-list">
-                    <li>
-                      <i class="fa-regular fa-circle-check"></i>
-                      <p>1000 účtenek měsíčně</p>
-                    </li>
-                    <li>
-                      <i class="fa-regular fa-circle-check"></i>
-                      <p>Zálohování 15 měsíců</p>
-                    </li>
-                  </ul>
-                </span>
+          <section id="form-step-1">
+            <section id="plans">
+              <h2>
+                Vyberte si
+                <span class="text-highlight">licenci</span>
+              </h2>
+              <section id="switch-section">
                 <input
-                  data-price="135"
-                  class="form-input"
                   type="radio"
-                  name="licence"
-                  id="piccolo-classic"
+                  name="switch"
+                  id="yearly"
+                  checked
                   required
                 />
-                <label for="piccolo-classic"
-                  ><p class="primary-button hover-animation">Vybrat</p></label
-                >
-              </article>
-              <article class="plan" id="pro-plan">
-                <span>
-                  <h3>PiCCOLO <span class="text-highlight">PRO</span></h3>
-                  <span class="pricing-wrapper"
-                    ><p id="pro-price" class="price">XXX Kč</p>
-                    <p>Za měsíc</p>
+                <label for="yearly">Ročně (sleva 20%)</label>
+                <input type="radio" name="switch" id="monthly" required />
+                <label for="monthly">Měsíčně</label>
+              </section>
+              <section id="plans-table">
+                <article class="plan">
+                  <span>
+                    <h3>PiCCOLO <span class="text-highlight">Classic</span></h3>
+                    <span class="pricing-wrapper"
+                      ><p id="classic-price" class="price">XXX Kč</p>
+                      <p>Za měsíc</p>
+                    </span>
+                    <ul class="features-list">
+                      <li>
+                        <i class="fa-regular fa-circle-check"></i>
+                        <p>1000 účtenek měsíčně</p>
+                      </li>
+                      <li>
+                        <i class="fa-regular fa-circle-check"></i>
+                        <p>Zálohování 15 měsíců</p>
+                      </li>
+                    </ul>
                   </span>
-                  <ul class="features-list">
-                    <li>
-                      <i class="fa-regular fa-circle-check"></i>
-                      <p>Neomezeně účtenek</p>
-                    </li>
-                    <li>
-                      <i class="fa-regular fa-circle-check"></i>
-                      <p>Zálohování 126 měsíců</p>
-                    </li>
-                    <li>
-                      <i class="fa-regular fa-circle-check"></i>
-                      <p>Export do Excelu</p>
-                    </li>
-                    <li>
-                      <i class="fa-regular fa-circle-check"></i>
-                      <p>Emailový reporting</p>
-                    </li>
-                    <li>
-                      <i class="fa-regular fa-circle-check"></i>
-                      <p>Seskupování záznamů</p>
-                    </li>
-                    <li>
-                      <i class="fa-regular fa-circle-check"></i>
-                      <p>Rozšířený filtr</p>
-                    </li>
-                    <li>
-                      <i class="fa-regular fa-circle-check"></i>
-                      <p>Sklady a inventury</p>
-                    </li>
-                    <li>
-                      <i class="fa-regular fa-circle-check"></i>
-                      <p>Cizí měny</p>
-                    </li>
-                  </ul>
-                </span>
-                <input
-                  data-price="390"
-                  class="form-input"
-                  type="radio"
-                  name="licence"
-                  id="piccolo-pro"
-                  required
-                />
-                <label for="piccolo-pro"
-                  ><p class="primary-button hover-animation">Vybrat</p></label
-                >
-              </article>
-              <article class="plan">
-                <span>
-                  <h3>PiCCOLO <span class="text-highlight">Plus</span></h3>
-                  <span class="pricing-wrapper"
-                    ><p id="plus-price" class="price">XXX Kč</p>
-                    <p>Za měsíc</p>
+                  <input
+                    data-price="135"
+                    class="form-input"
+                    type="radio"
+                    name="licence"
+                    id="piccolo-classic"
+                    required
+                  />
+                  <label for="piccolo-classic"
+                    ><p class="primary-button hover-animation">Vybrat</p></label
+                  >
+                </article>
+                <article class="plan" id="pro-plan">
+                  <span>
+                    <h3>PiCCOLO <span class="text-highlight">PRO</span></h3>
+                    <span class="pricing-wrapper"
+                      ><p id="pro-price" class="price">XXX Kč</p>
+                      <p>Za měsíc</p>
+                    </span>
+                    <ul class="features-list">
+                      <li>
+                        <i class="fa-regular fa-circle-check"></i>
+                        <p>Neomezeně účtenek</p>
+                      </li>
+                      <li>
+                        <i class="fa-regular fa-circle-check"></i>
+                        <p>Zálohování 126 měsíců</p>
+                      </li>
+                      <li>
+                        <i class="fa-regular fa-circle-check"></i>
+                        <p>Export do Excelu</p>
+                      </li>
+                      <li>
+                        <i class="fa-regular fa-circle-check"></i>
+                        <p>Emailový reporting</p>
+                      </li>
+                      <li>
+                        <i class="fa-regular fa-circle-check"></i>
+                        <p>Seskupování záznamů</p>
+                      </li>
+                      <li>
+                        <i class="fa-regular fa-circle-check"></i>
+                        <p>Rozšířený filtr</p>
+                      </li>
+                      <li>
+                        <i class="fa-regular fa-circle-check"></i>
+                        <p>Sklady a inventury</p>
+                      </li>
+                      <li>
+                        <i class="fa-regular fa-circle-check"></i>
+                        <p>Cizí měny</p>
+                      </li>
+                    </ul>
                   </span>
-                  <ul class="features-list">
-                    <li>
-                      <i class="fa-regular fa-circle-check"></i>
-                      <p>Neomezeně účtenek</p>
-                    </li>
-                    <li>
-                      <i class="fa-regular fa-circle-check"></i>
-                      <p>Zálohování 37 měsíců</p>
-                    </li>
-                    <li>
-                      <i class="fa-regular fa-circle-check"></i>
-                      <p>Export do Excelu</p>
-                    </li>
-                    <li>
-                      <i class="fa-regular fa-circle-check"></i>
-                      <p>Emailový reporting</p>
-                    </li>
-                    <li>
-                      <i class="fa-regular fa-circle-check"></i>
-                      <p>Seskupování záznamů</p>
-                    </li>
-                    <li>
-                      <i class="fa-regular fa-circle-check"></i>
-                      <p>Rozšířený filtr</p>
-                    </li>
-                  </ul>
-                </span>
-                <input
-                  data-price="200"
-                  class="form-input"
-                  type="radio"
-                  name="licence"
-                  id="piccolo-plus"
-                  required
-                />
-                <label for="piccolo-plus"
-                  ><p class="primary-button hover-animation">Vybrat</p></label
-                >
-              </article>
-            </section>
-          </section>
-          <section id="hardware">
-            <h2>
-              Vyberte si
-              <span class="text-highlight">pokladnu</span>
-            </h2>
-            <section id="hardware-box">
-              <article class="hardware-option">
-                <section class="image-and-name">
-                  <img
-                    class="hardware-image"
-                    src="https://www.datona.cz/sites/default/files/ELO_15E2-500-3.jpg"
-                    alt=""
-                  />
-                  <h3>Pokladna Elo</h3>
-                </section>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Exercitationem, quo?
-                </p>
-                <section class="hardware-price-wrapper">
-                  <p><b>17 900 Kč</b></p>
                   <input
-                    data-price="17900"
-                    class="hardware-form-input"
+                    data-price="390"
+                    class="form-input"
                     type="radio"
-                    name="hardware"
-                    id="pokladna-elo"
+                    name="licence"
+                    id="piccolo-pro"
                     required
                   />
-                  <label for="pokladna-elo"
+                  <label for="piccolo-pro"
                     ><p class="primary-button hover-animation">Vybrat</p></label
                   >
-                </section>
-              </article>
-              <hr />
-              <article class="hardware-option">
-                <section class="image-and-name">
-                  <img
-                    class="hardware-image"
-                    src="https://www.datona.cz/sites/default/files/ELO_15E2-500-3.jpg"
-                    alt=""
-                  />
-                  <h3>6" tablet</h3>
-                </section>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Exercitationem, quo?
-                </p>
-                <section class="hardware-price-wrapper">
-                  <p><b>9 800 Kč</b></p>
+                </article>
+                <article class="plan">
+                  <span>
+                    <h3>PiCCOLO <span class="text-highlight">Plus</span></h3>
+                    <span class="pricing-wrapper"
+                      ><p id="plus-price" class="price">XXX Kč</p>
+                      <p>Za měsíc</p>
+                    </span>
+                    <ul class="features-list">
+                      <li>
+                        <i class="fa-regular fa-circle-check"></i>
+                        <p>Neomezeně účtenek</p>
+                      </li>
+                      <li>
+                        <i class="fa-regular fa-circle-check"></i>
+                        <p>Zálohování 37 měsíců</p>
+                      </li>
+                      <li>
+                        <i class="fa-regular fa-circle-check"></i>
+                        <p>Export do Excelu</p>
+                      </li>
+                      <li>
+                        <i class="fa-regular fa-circle-check"></i>
+                        <p>Emailový reporting</p>
+                      </li>
+                      <li>
+                        <i class="fa-regular fa-circle-check"></i>
+                        <p>Seskupování záznamů</p>
+                      </li>
+                      <li>
+                        <i class="fa-regular fa-circle-check"></i>
+                        <p>Rozšířený filtr</p>
+                      </li>
+                    </ul>
+                  </span>
                   <input
-                    data-price="9800"
-                    class="hardware-form-input"
+                    data-price="200"
+                    class="form-input"
                     type="radio"
-                    name="hardware"
-                    id="6-tablet"
+                    name="licence"
+                    id="piccolo-plus"
                     required
                   />
-                  <label for="6-tablet"
+                  <label for="piccolo-plus"
                     ><p class="primary-button hover-animation">Vybrat</p></label
                   >
-                </section>
-              </article>
-              <hr />
-              <article class="hardware-option">
-                <section class="image-and-name">
-                  <img
-                    class="hardware-image"
-                    src="https://www.datona.cz/sites/default/files/ELO_15E2-500-3.jpg"
-                    alt=""
-                  />
-                  <h3>10" tablet</h3>
-                </section>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Exercitationem, quo?
-                </p>
-                <section class="hardware-price-wrapper">
-                  <p><b>8 600 Kč</b></p>
-                  <input
-                    data-price="8600"
-                    class="hardware-form-input"
-                    type="radio"
-                    name="hardware"
-                    id="10-tablet"
-                    required
-                  />
-                  <label for="10-tablet"
-                    ><p class="primary-button hover-animation">Vybrat</p></label
-                  >
-                </section>
-              </article>
-              <hr />
-              <article class="hardware-option">
-                <section class="image-and-name">
-                  <img
-                    class="hardware-image"
-                    src="https://www.datona.cz/sites/default/files/ELO_15E2-500-3.jpg"
-                    alt=""
-                  />
-                  <h3>Mám vlastní zařízení</h3>
-                </section>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Exercitationem, quo?
-                </p>
-                <section class="hardware-price-wrapper">
-                  <p><b>Zdarma</b></p>
-                  <input
-                    data-price="0"
-                    class="hardware-form-input"
-                    type="radio"
-                    name="hardware"
-                    id="custom"
-                    required
-                  />
-                  <label for="custom"
-                    ><p class="primary-button hover-animation">Vybrat</p></label
-                  >
-                </section>
-              </article>
-            </section>
-          </section>
-          <section id="calculation">
-            <h2>
-              Kalkulace
-              <span class="text-highlight">ceny</span>
-            </h2>
-            <section id="calculation-box">
-              <article class="calculation-field">
-                <p><b>Zadejte množství:</b></p>
-                <input
-                  id="order-quantity"
-                  type="number"
-                  required
-                  max="20"
-                  min="1"
-                  value="1"
-                />
-              </article>
-              <hr />
-              <article class="calculation-field">
-                <p id="licence-price-label">Cena licence:</p>
-                <p id="licence-price">Chybí údaje</p>
-              </article>
-              <article class="calculation-field">
-                <p>Cena za pokladnu:</p>
-                <p id="hardware-price">Chybí údaje</p>
-              </article>
-              <article class="calculation-field">
-                <p>DPH (21%):</p>
-                <p id="tax">Chybí údaje</p>
-              </article>
-              <hr />
-              <article class="calculation-field">
-                <p><b>Celková cena:</b></p>
-                <p id="total-with-tax"><b>Chybí údaje</b></p>
-              </article>
-              <section id="continue-field">
-                <button class="primary-button hover-animation">
-                  Pokračovat
-                </button>
+                </article>
               </section>
             </section>
+            <section id="hardware">
+              <h2>
+                Vyberte si
+                <span class="text-highlight">pokladnu</span>
+              </h2>
+              <section id="hardware-box">
+                <article class="hardware-option">
+                  <section class="image-and-name">
+                    <img
+                      class="hardware-image"
+                      src="https://www.datona.cz/sites/default/files/ELO_15E2-500-3.jpg"
+                      alt=""
+                    />
+                    <h3>Pokladna Elo</h3>
+                  </section>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Exercitationem, quo?
+                  </p>
+                  <section class="hardware-price-wrapper">
+                    <p><b>17 900 Kč</b></p>
+                    <input
+                      data-price="17900"
+                      class="hardware-form-input"
+                      type="radio"
+                      name="hardware"
+                      id="pokladna-elo"
+                      required
+                    />
+                    <label for="pokladna-elo"
+                      ><p class="primary-button hover-animation">
+                        Vybrat
+                      </p></label
+                    >
+                  </section>
+                </article>
+                <hr />
+                <article class="hardware-option">
+                  <section class="image-and-name">
+                    <img
+                      class="hardware-image"
+                      src="https://www.datona.cz/sites/default/files/ELO_15E2-500-3.jpg"
+                      alt=""
+                    />
+                    <h3>6" tablet</h3>
+                  </section>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Exercitationem, quo?
+                  </p>
+                  <section class="hardware-price-wrapper">
+                    <p><b>9 800 Kč</b></p>
+                    <input
+                      data-price="9800"
+                      class="hardware-form-input"
+                      type="radio"
+                      name="hardware"
+                      id="6-tablet"
+                      required
+                    />
+                    <label for="6-tablet"
+                      ><p class="primary-button hover-animation">
+                        Vybrat
+                      </p></label
+                    >
+                  </section>
+                </article>
+                <hr />
+                <article class="hardware-option">
+                  <section class="image-and-name">
+                    <img
+                      class="hardware-image"
+                      src="https://www.datona.cz/sites/default/files/ELO_15E2-500-3.jpg"
+                      alt=""
+                    />
+                    <h3>10" tablet</h3>
+                  </section>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Exercitationem, quo?
+                  </p>
+                  <section class="hardware-price-wrapper">
+                    <p><b>8 600 Kč</b></p>
+                    <input
+                      data-price="8600"
+                      class="hardware-form-input"
+                      type="radio"
+                      name="hardware"
+                      id="10-tablet"
+                      required
+                    />
+                    <label for="10-tablet"
+                      ><p class="primary-button hover-animation">
+                        Vybrat
+                      </p></label
+                    >
+                  </section>
+                </article>
+                <hr />
+                <article class="hardware-option">
+                  <section class="image-and-name">
+                    <img
+                      class="hardware-image"
+                      src="https://www.datona.cz/sites/default/files/ELO_15E2-500-3.jpg"
+                      alt=""
+                    />
+                    <h3>Mám vlastní zařízení</h3>
+                  </section>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Exercitationem, quo?
+                  </p>
+                  <section class="hardware-price-wrapper">
+                    <p><b>Zdarma</b></p>
+                    <input
+                      data-price="0"
+                      class="hardware-form-input"
+                      type="radio"
+                      name="hardware"
+                      id="custom"
+                      required
+                    />
+                    <label for="custom"
+                      ><p class="primary-button hover-animation">
+                        Vybrat
+                      </p></label
+                    >
+                  </section>
+                </article>
+              </section>
+            </section>
+            <section id="calculation">
+              <h2>
+                Kalkulace
+                <span class="text-highlight">ceny</span>
+              </h2>
+              <section id="calculation-box">
+                <article class="calculation-field">
+                  <p><b>Zadejte množství:</b></p>
+                  <input
+                    id="order-quantity"
+                    type="number"
+                    required
+                    max="20"
+                    min="1"
+                    value="1"
+                  />
+                </article>
+                <hr />
+                <article class="calculation-field">
+                  <p id="licence-price-label">Cena licence:</p>
+                  <p id="licence-price">Chybí údaje</p>
+                </article>
+                <article class="calculation-field">
+                  <p>Cena za pokladnu:</p>
+                  <p id="hardware-price">Chybí údaje</p>
+                </article>
+                <article class="calculation-field">
+                  <p>DPH (21%):</p>
+                  <p id="tax">Chybí údaje</p>
+                </article>
+                <hr />
+                <article class="calculation-field">
+                  <p><b>Celková cena:</b></p>
+                  <p id="total-with-tax"><b>Chybí údaje</b></p>
+                </article>
+                <section id="continue-field">
+                  <button id="continue" class="primary-button hover-animation">
+                    Pokračovat
+                  </button>
+                </section>
+              </section>
+            </section>
+          </section>
+          <section id="form-step-2">
+            <h2>Dokončení <span class="text-highlight">objednávky</span></h2>
+            <div class="form-box">
+              <section class="step-title">
+                <p>Osobní údaje</p>
+              </section>
+              <section class="form-fields">
+                <section class="form-row">
+                  <article class="form-field">
+                    <label for="name">Jméno:</label>
+                    <input id="name" type="text" required />
+                  </article>
+                  <article class="form-field">
+                    <label for="last-name">Přijmení:</label>
+                    <input id="last-name" type="text" required />
+                  </article>
+                </section>
+                <section class="form-row">
+                  <article class="form-field">
+                    <label for="phone">Telefon:</label>
+                    <input id="phone" type="tel" required />
+                  </article>
+                </section>
+                <section class="form-row">
+                  <article class="form-field">
+                    <label for="email">Email:</label>
+                    <input id="email" type="email" required />
+                  </article>
+                </section>
+                <section class="form-row">
+                  <article class="form-field">
+                    <label for="address">Ulice a číslo popisné:</label>
+                    <input id="address" type="text" required />
+                  </article>
+                </section>
+                <section class="form-row">
+                  <article class="form-field">
+                    <label for="city">Město:</label>
+                    <input id="city" type="text" required />
+                  </article>
+                  <article class="form-field">
+                    <label for="postal-code">PSČ:</label>
+                    <input id="postal-code" type="text" required />
+                  </article>
+                </section>
+              </section>
+            </div>
+            <div class="form-box">
+              <section class="step-title">
+                <p>Platba</p>
+                <img id="webpay" src="/home/images/GPwebpay-logo.png" alt="" />
+              </section>
+              <p>
+                Odesláním objednávky souhlasíte s našimi obchodními podmínkami a
+                zásadami zpracování osobních údajů
+              </p>
+              <section id="form-payment-wrapper">
+                <p id="form-price">Celkem: Chybí údaje</p>
+                <button type="submit" class="primary-button hover-animation">
+                  Přejít k platbě
+                </button>
+              </section>
+            </div>
           </section>
         </form>
       </main>

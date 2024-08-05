@@ -97,6 +97,8 @@ function calculateTotalPrice() {
       numberFormatter.format(tax.toFixed(2)) + " Kč";
     document.querySelector(".calculation-field #total-with-tax").innerText =
       numberFormatter.format(totalWithTax.toFixed(2)) + " Kč";
+    document.querySelector("#form-price").innerText =
+      "Celkem: " + numberFormatter.format(totalWithTax.toFixed(2)) + " Kč";
   }
 
   document.querySelectorAll("input").forEach((input) => {
@@ -104,7 +106,22 @@ function calculateTotalPrice() {
   });
 }
 
+function formNextStep() {
+  const button = document.querySelector("button#continue");
+  const formPart1 = document.querySelector("section#form-step-1");
+  const formPart2 = document.querySelector("section#form-step-2");
+
+  button.addEventListener("click", function () {
+    if (document.querySelector("#calculation #order-quantity").value >= "1") {
+      formPart1.style.display = "none";
+      formPart2.style.display = "flex";
+    } else {
+    }
+  });
+}
+
 updateLicencePrices(170, 490, 250, 20);
 animateButtons("#plans-table .form-input");
 animateButtons("#hardware .hardware-form-input");
 calculateTotalPrice();
+formNextStep();
