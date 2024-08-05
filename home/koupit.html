@@ -251,10 +251,13 @@
                     type="radio"
                     name="licence"
                     id="piccolo-pro"
+                    checked
                     required
                   />
                   <label for="piccolo-pro"
-                    ><p class="primary-button hover-animation">Vybrat</p></label
+                    ><p class="secondary-button hover-animation">
+                      Vybráno
+                    </p></label
                   >
                 </article>
                 <article class="plan">
@@ -321,8 +324,8 @@
                     <h3>Pokladna Elo</h3>
                   </section>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Exercitationem, quo?
+                    Pokročilá pokladna s prémiovou výbavou pro velké a náročné
+                    podniky
                   </p>
                   <section class="hardware-price-wrapper">
                     <p><b>17 900 Kč</b></p>
@@ -352,13 +355,13 @@
                     <h3>6" tablet</h3>
                   </section>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Exercitationem, quo?
+                    Lehký, výkonný a odolný 6" tablet s Androidem pro malé a
+                    střední podniky
                   </p>
                   <section class="hardware-price-wrapper">
-                    <p><b>9 800 Kč</b></p>
+                    <p><b>2 400 Kč</b></p>
                     <input
-                      data-price="9800"
+                      data-price="2400"
                       class="hardware-form-input"
                       type="radio"
                       name="hardware"
@@ -383,22 +386,23 @@
                     <h3>10" tablet</h3>
                   </section>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Exercitationem, quo?
+                    Lehký, výkonný a odolný 10" tablet s Androidem pro malé a
+                    střední podniky
                   </p>
                   <section class="hardware-price-wrapper">
-                    <p><b>8 600 Kč</b></p>
+                    <p><b>3 900 Kč</b></p>
                     <input
-                      data-price="8600"
+                      data-price="3900"
                       class="hardware-form-input"
                       type="radio"
                       name="hardware"
                       id="10-tablet"
                       required
+                      checked
                     />
                     <label for="10-tablet"
-                      ><p class="primary-button hover-animation">
-                        Vybrat
+                      ><p class="secondary-button hover-animation">
+                        Vybráno
                       </p></label
                     >
                   </section>
@@ -414,8 +418,8 @@
                     <h3>Mám vlastní zařízení</h3>
                   </section>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Exercitationem, quo?
+                    Licenci můžete bez problému využít i na svém vlastním
+                    zařízení s Androidem
                   </p>
                   <section class="hardware-price-wrapper">
                     <p><b>Zdarma</b></p>
@@ -463,13 +467,17 @@
                   <p id="hardware-price">Chybí údaje</p>
                 </article>
                 <article class="calculation-field">
-                  <p>DPH (21%):</p>
-                  <p id="tax">Chybí údaje</p>
+                  <p><b>Celková cena bez DPH:</b></p>
+                  <p id="total-no-tax"><b>Chybí údaje</b></p>
                 </article>
                 <hr />
                 <article class="calculation-field">
-                  <p><b>Celková cena:</b></p>
-                  <p id="total-with-tax"><b>Chybí údaje</b></p>
+                  <p>DPH (21%):</p>
+                  <p id="tax">Chybí údaje</p>
+                </article>
+                <article class="calculation-field">
+                  <p><b>Celková cena s DPH:</b></p>
+                  <p id="total-with-tax">Chybí údaje</p>
                 </article>
                 <section id="continue-field">
                   <button id="continue" class="primary-button hover-animation">
@@ -536,7 +544,7 @@
                 zásadami zpracování osobních údajů
               </p>
               <section id="form-payment-wrapper">
-                <p id="form-price">Celkem: Chybí údaje</p>
+                <p id="form-price">Celkem s DPH: Chybí údaje</p>
                 <button type="submit" class="primary-button hover-animation">
                   Přejít k platbě
                 </button>

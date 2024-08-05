@@ -82,12 +82,10 @@ function calculateTotalPrice() {
 
     const licenceTotal = licencePrice * orderQuantity;
     const hardwareTotal = hardwarePrice * orderQuantity;
+    const totalNoTax = (+licencePrice + +hardwarePrice) * orderQuantity;
     const tax =
       (+licencePrice + +hardwarePrice) * orderQuantity * (taxPercentage / 100);
-    const totalWithTax =
-      (+licencePrice + +hardwarePrice) *
-      orderQuantity *
-      (1 + taxPercentage / 100);
+    const totalWithTax = totalNoTax + tax;
 
     document.querySelector(".calculation-field #licence-price").innerText =
       numberFormatter.format(licenceTotal.toFixed(2)) + " Kč";
@@ -97,6 +95,8 @@ function calculateTotalPrice() {
       numberFormatter.format(tax.toFixed(2)) + " Kč";
     document.querySelector(".calculation-field #total-with-tax").innerText =
       numberFormatter.format(totalWithTax.toFixed(2)) + " Kč";
+    document.querySelector(".calculation-field #total-no-tax").innerText =
+      numberFormatter.format(totalNoTax.toFixed(2)) + " Kč";
     document.querySelector("#form-price").innerText =
       "Celkem: " + numberFormatter.format(totalWithTax.toFixed(2)) + " Kč";
   }
@@ -104,6 +104,7 @@ function calculateTotalPrice() {
   document.querySelectorAll("input").forEach((input) => {
     input.addEventListener("change", updatePrices);
   });
+  updatePrices();
 }
 
 function formNextStep() {
@@ -120,8 +121,21 @@ function formNextStep() {
   });
 }
 
+function checkForNegativeNumber(inputSelector) {
+  input = document.querySelector(inputSelector);
+
+  input.addEventListener("change", function () {
+    if (input.value <= 0) {
+      input.value = 1;
+    } else if (input.value > 20) {
+      input.value = 20;
+    }
+  });
+}
+
 updateLicencePrices(170, 490, 250, 20);
 animateButtons("#plans-table .form-input");
 animateButtons("#hardware .hardware-form-input");
+checkForNegativeNumber("#calculation #order-quantity");
 calculateTotalPrice();
 formNextStep();
