@@ -160,7 +160,7 @@ header .burger-menu-icon {
   display: none;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 850px) {
   ul.nav-bar {
     display: none;
   }

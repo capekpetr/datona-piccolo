@@ -104,7 +104,7 @@ function calculateTotalPrice() {
   });
 }
 
-calculateTotalPrice();
 updateLicencePrices(170, 490, 250, 20);
 animateButtons("#plans-table .form-input");
 animateButtons("#hardware .hardware-form-input");
+calculateTotalPrice();
