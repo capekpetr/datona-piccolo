@@ -47,6 +47,7 @@ function updateLicencePrices(classic, pro, plus, percentage) {
   switchInputs.forEach((input) => {
     input.addEventListener("change", setPrices);
   });
+  calculateTotalPrice();
 }
 
 function animateButtons(inputsLocationClass) {
