@@ -24,6 +24,10 @@ input[type="radio"] {
   display: none;
 }
 
+input[type="checkbox"] {
+  display: none;
+}
+
 /* ================================SWITCH===============================*/
 
 #switch-section {
@@ -142,7 +146,8 @@ section#form-step-2 h2 {
 }
 
 /* ================================HARDWARE===============================*/
-section#hardware {
+section#hardware,
+section#extensions {
   width: 100%;
   display: flex;
   gap: 30px;
@@ -151,7 +156,7 @@ section#hardware {
   align-items: center;
 }
 
-section#hardware-box {
+section.box {
   padding: 10px 30px;
   width: 100%;
   display: flex;
@@ -164,7 +169,7 @@ section#hardware-box {
   border-radius: 12px;
 }
 
-.hardware-option {
+.box-option {
   margin-top: 5px;
   width: 100%;
   display: grid;
@@ -173,12 +178,12 @@ section#hardware-box {
   align-items: center;
 }
 
-.hardware-option p {
+.box-option p {
   max-width: 350px;
   width: 100%;
 }
 
-.hardware-price-wrapper {
+.box-price-wrapper {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -192,8 +197,18 @@ section#hardware-box {
   align-items: center;
 }
 
-.hardware-image {
+section.product-image-wrapper {
+  padding: 10px;
+  width: 100%;
+  max-width: 110px;
   height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-image {
+  height: 100%;
 }
 
 /* ================================CALCULATION===============================*/
@@ -333,7 +348,7 @@ section#form-step-1 {
 /* ================================RESPONSIVITY===============================*/
 
 @media (max-width: 1200px) {
-  .hardware-option {
+  .box-option {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 15px;
@@ -343,12 +358,12 @@ section#form-step-1 {
     grid-row: span 2;
   }
 
-  .hardware-price-wrapper {
+  .box-price-wrapper {
     justify-content: end;
     gap: 30px;
   }
 
-  .hardware-option p {
+  .box-option p {
     justify-self: end;
     width: auto;
   }
@@ -372,7 +387,7 @@ section#form-step-1 {
 }
 
 @media (max-width: 850px) {
-  .hardware-option {
+  .box-option {
     justify-items: start;
     align-items: center;
     text-align: center;
@@ -381,11 +396,11 @@ section#form-step-1 {
     gap: 20px;
   }
 
-  .hardware-price-wrapper {
+  .box-price-wrapper {
     justify-content: end;
   }
 
-  .hardware-option p {
+  .box-option p {
     justify-self: center;
     width: auto;
     gap: 25px;
@@ -400,11 +415,11 @@ section#form-step-1 {
 }
 
 @media (max-width: 480px) {
-  .hardware-price-wrapper {
+  .box-price-wrapper {
     justify-content: space-between;
   }
 
-  .hardware-option p {
+  .box-option p {
     justify-self: center;
     width: auto;
   }

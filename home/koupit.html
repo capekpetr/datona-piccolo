@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PiCCOLO - spolehlivá pokladna do kapsy</title>
+    <title>PiCCOLO - Objednávka pokladního systému</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -313,23 +313,25 @@
                 Vyberte si
                 <span class="text-highlight">pokladnu</span>
               </h2>
-              <section id="hardware-box">
-                <article class="hardware-option">
+              <section class="box">
+                <article class="box-option">
                   <section class="image-and-name">
-                    <img
-                      class="hardware-image"
-                      src="./images/elo-paypoint.png"
-                      alt=""
-                    />
+                    <section class="product-image-wrapper">
+                      <img
+                        class="box-image"
+                        src="./images/elo-paypoint.png"
+                        alt=""
+                      />
+                    </section>
                     <h3>Pokladna Elo</h3>
                   </section>
                   <p>
                     Pokročilá pokladna ELO PayPoint pro velké a náročné podniky
                   </p>
-                  <section class="hardware-price-wrapper">
+                  <section class="box-price-wrapper">
                     <p><b>15 900 Kč</b></p>
                     <input
-                      data-price="17900"
+                      data-price="15900"
                       class="hardware-form-input"
                       type="radio"
                       name="hardware"
@@ -344,20 +346,22 @@
                   </section>
                 </article>
                 <hr />
-                <article class="hardware-option">
+                <article class="box-option">
                   <section class="image-and-name">
-                    <img
-                      class="hardware-image"
-                      src="./images/elo-tablet.png"
-                      alt=""
-                    />
+                    <section class="product-image-wrapper">
+                      <img
+                        class="box-image"
+                        src="./images/elo-tablet.png"
+                        alt=""
+                      />
+                    </section>
                     <h3>8" tablet</h3>
                   </section>
                   <p>
                     Lehký, výkonný a odolný 8" tablet s Androidem pro malé a
                     střední podniky
                   </p>
-                  <section class="hardware-price-wrapper">
+                  <section class="box-price-wrapper">
                     <p><b>2 400 Kč</b></p>
                     <input
                       data-price="2400"
@@ -375,20 +379,22 @@
                   </section>
                 </article>
                 <hr />
-                <article class="hardware-option">
+                <article class="box-option">
                   <section class="image-and-name">
-                    <img
-                      class="hardware-image"
-                      src="./images/elo-tablet.png"
-                      alt=""
-                    />
+                    <section class="product-image-wrapper">
+                      <img
+                        class="box-image"
+                        src="./images/elo-tablet.png"
+                        alt=""
+                      />
+                    </section>
                     <h3>10" tablet</h3>
                   </section>
                   <p>
                     Lehký, výkonný a odolný 10" tablet s Androidem pro malé a
                     střední podniky
                   </p>
-                  <section class="hardware-price-wrapper">
+                  <section class="box-price-wrapper">
                     <p><b>3 900 Kč</b></p>
                     <input
                       data-price="3900"
@@ -407,20 +413,22 @@
                   </section>
                 </article>
                 <hr />
-                <article class="hardware-option">
+                <article class="box-option">
                   <section class="image-and-name">
-                    <img
-                      class="hardware-image"
-                      src="./images/customDevice.avif"
-                      alt=""
-                    />
+                    <section class="product-image-wrapper">
+                      <img
+                        class="box-image"
+                        src="./images/customDevice.avif"
+                        alt=""
+                      />
+                    </section>
                     <h3>Mám vlastní zařízení</h3>
                   </section>
                   <p>
                     Licenci můžete bez problému využít i na svém vlastním
                     zařízení s Androidem
                   </p>
-                  <section class="hardware-price-wrapper">
+                  <section class="box-price-wrapper">
                     <p><b>Zdarma</b></p>
                     <input
                       data-price="0"
@@ -433,6 +441,76 @@
                     <label for="custom"
                       ><p class="primary-button hover-animation">
                         Vybrat
+                      </p></label
+                    >
+                  </section>
+                </article>
+              </section>
+            </section>
+            <section id="extensions">
+              <h2>
+                Volitelné
+                <span class="text-highlight">doplňky</span>
+              </h2>
+              <section class="box">
+                <article class="box-option">
+                  <section class="image-and-name">
+                    <section class="product-image-wrapper">
+                      <img
+                        class="box-image"
+                        src="./images/elo-paypoint.png"
+                        alt=""
+                      />
+                    </section>
+                    <h3>Tiskárna</h3>
+                  </section>
+                  <p>
+                    Pokročilá pokladna ELO PayPoint pro velké a náročné podniky
+                  </p>
+                  <section class="box-price-wrapper">
+                    <p><b>15 900 Kč</b></p>
+                    <input
+                      data-price="15900"
+                      class="extensions-form-input"
+                      type="checkbox"
+                      id="tiskarna"
+                      required
+                    />
+                    <label for="tiskarna"
+                      ><p class="primary-button hover-animation">
+                        Přidat
+                      </p></label
+                    >
+                  </section>
+                </article>
+                <hr />
+                <article class="box-option">
+                  <section class="image-and-name">
+                    <section class="product-image-wrapper">
+                      <img
+                        class="box-image"
+                        src="./images/elo-tablet.png"
+                        alt=""
+                      />
+                    </section>
+                    <h3>Šuplík na prachy</h3>
+                  </section>
+                  <p>
+                    Lehký, výkonný a odolný 8" tablet s Androidem pro malé a
+                    střední podniky
+                  </p>
+                  <section class="box-price-wrapper">
+                    <p><b>2 400 Kč</b></p>
+                    <input
+                      data-price="2400"
+                      class="extensions-form-input"
+                      type="checkbox"
+                      id="suplik"
+                      required
+                    />
+                    <label for="suplik"
+                      ><p class="primary-button hover-animation">
+                        Přidat
                       </p></label
                     >
                   </section>

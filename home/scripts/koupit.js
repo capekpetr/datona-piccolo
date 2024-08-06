@@ -50,7 +50,7 @@ function updateLicencePrices(classic, pro, plus, percentage) {
   calculateTotalPrice();
 }
 
-function animateButtons(inputsLocationClass) {
+function animateRadioButtons(inputsLocationClass) {
   document.querySelectorAll(inputsLocationClass).forEach((input) => {
     input.addEventListener("change", function () {
       document.querySelectorAll(inputsLocationClass).forEach((input) => {
@@ -67,6 +67,22 @@ function animateButtons(inputsLocationClass) {
   });
 }
 
+function animateCheckboxButton(inputsLocationClass) {
+  document.querySelectorAll(inputsLocationClass).forEach(function (checkbox) {
+    checkbox.addEventListener("change", function () {
+      if (this.checked) {
+        this.nextElementSibling.firstChild.classList.remove("primary-button");
+        this.nextElementSibling.firstChild.classList.add("secondary-button");
+        this.nextElementSibling.firstChild.innerText = "Odebrat";
+      } else {
+        this.nextElementSibling.firstChild.classList.remove("secondary-button");
+        this.nextElementSibling.firstChild.classList.add("primary-button");
+        this.nextElementSibling.firstChild.innerText = "Přidat";
+      }
+    });
+  });
+}
+
 function calculateTotalPrice() {
   const taxPercentage = 21;
   const numberFormatter = new Intl.NumberFormat("cs-CZ");
@@ -79,6 +95,10 @@ function calculateTotalPrice() {
       .dataset.price;
     const hardwarePrice = document.querySelector("#hardware input:checked")
       .dataset.price;
+    const checkboxes = document.querySelectorAll(
+      "#extensions .extensions-form-input"
+    );
+    let extensionsPrice = 0;
 
     const licenceTotal = licencePrice * orderQuantity;
     const hardwareTotal = hardwarePrice * orderQuantity;
@@ -134,8 +154,9 @@ function checkForNegativeNumber(inputSelector) {
 }
 
 updateLicencePrices(170, 490, 250, 20);
-animateButtons("#plans-table .form-input");
-animateButtons("#hardware .hardware-form-input");
+animateRadioButtons("#plans-table .form-input");
+animateRadioButtons("#hardware .hardware-form-input");
+animateCheckboxButton("#extensions .extensions-form-input");
 checkForNegativeNumber("#calculation #order-quantity");
 calculateTotalPrice();
 formNextStep();
