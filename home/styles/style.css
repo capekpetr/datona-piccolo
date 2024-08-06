@@ -41,6 +41,7 @@ h3 {
   color: var(--headings);
   font-size: clamp(1.2rem, 1.0909rem + 0.5455vw, 1.5rem);
   font-weight: 600;
+  line-height: 2rem;
 }
 
 p,
