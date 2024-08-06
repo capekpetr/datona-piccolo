@@ -414,11 +414,16 @@ section#form-step-1 {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 650px) {
   .box-price-wrapper {
     justify-content: space-between;
   }
+}
 
+@media (max-width: 480px) {
+  * {
+    text-align: center;
+  }
   .box-option p {
     justify-self: center;
     width: auto;
@@ -436,5 +441,9 @@ section#form-step-1 {
 @media (max-width: 400px) {
   h1 {
     font-size: 36px;
+  }
+
+  .price {
+    font-size: 2.5rem;
   }
 }

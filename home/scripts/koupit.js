@@ -67,7 +67,7 @@ function animateRadioButtons(inputsLocationClass) {
   });
 }
 
-function animateCheckboxButton(inputsLocationClass) {
+function animateCheckboxButtons(inputsLocationClass) {
   document.querySelectorAll(inputsLocationClass).forEach(function (checkbox) {
     checkbox.addEventListener("change", function () {
       if (this.checked) {
@@ -160,7 +160,7 @@ function checkForNegativeNumber(inputSelector) {
 updateLicencePrices(170, 490, 250, 20);
 animateRadioButtons("#plans-table .form-input");
 animateRadioButtons("#hardware .hardware-form-input");
-animateCheckboxButton("#extensions .extensions-form-input");
+animateCheckboxButtons("#extensions .extensions-form-input");
 checkForNegativeNumber("#calculation #order-quantity");
 calculateTotalPrice();
 formNextStep();
