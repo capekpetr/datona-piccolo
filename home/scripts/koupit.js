@@ -95,16 +95,18 @@ function calculateTotalPrice() {
       .dataset.price;
     const hardwarePrice = document.querySelector("#hardware input:checked")
       .dataset.price;
-    const checkboxes = document.querySelectorAll(
-      "#extensions .extensions-form-input"
-    );
     let extensionsPrice = 0;
+    document
+      .querySelectorAll("#extensions .extensions-form-input:checked")
+      .forEach(function (checkbox) {
+        extensionsPrice = +extensionsPrice + +checkbox.dataset.price;
+      });
 
     const licenceTotal = licencePrice * orderQuantity;
     const hardwareTotal = hardwarePrice * orderQuantity;
-    const totalNoTax = (+licencePrice + +hardwarePrice) * orderQuantity;
-    const tax =
-      (+licencePrice + +hardwarePrice) * orderQuantity * (taxPercentage / 100);
+    const extensionsTotal = extensionsPrice * orderQuantity;
+    const totalNoTax = +licenceTotal + +hardwareTotal + +extensionsTotal;
+    const tax = totalNoTax * (taxPercentage / 100);
     const totalWithTax = totalNoTax + tax;
 
     document.querySelector(".calculation-field #licence-price").innerText =
@@ -117,6 +119,8 @@ function calculateTotalPrice() {
       numberFormatter.format(totalWithTax.toFixed(2)) + " Kč";
     document.querySelector(".calculation-field #total-no-tax").innerText =
       numberFormatter.format(totalNoTax.toFixed(2)) + " Kč";
+    document.querySelector(".calculation-field #extensions-price").innerText =
+      numberFormatter.format(extensionsTotal.toFixed(2)) + " Kč";
     document.querySelector("#form-price").innerText =
       "Celkem: " + numberFormatter.format(totalWithTax.toFixed(2)) + " Kč";
   }
