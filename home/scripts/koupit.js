@@ -143,9 +143,11 @@ function formSwitchStep(buttonLocation) {
     ) {
       formPart1.style.display = "none";
       formPart2.style.display = "flex";
+      window.location.hash = "";
     } else {
       formPart1.style.display = "flex";
       formPart2.style.display = "none";
+      window.location.hash = "#calculation";
     }
   });
 }
@@ -173,6 +175,30 @@ function SwitchDeliveryAddressFields() {
   });
 }
 
+function Zasilkovna() {
+  const packetaApiKey = "762a70838a1c4a35";
+  const packetaOptions = {
+    valueFormat: '"Packeta",id,carrierId,carrierPickupPointId,name,city,street',
+    view: "modal",
+  };
+  const zasilkovnaButton = document.querySelector(
+    "button.packeta-selector-open"
+  );
+  false;
+  function showSelectedPickupPoint(point) {
+    const saveElement = document.querySelector(".pickup-point-value");
+    // Add here an action on pickup point selection
+    saveElement.innerText = "";
+    if (point) {
+      console.log("Selected point", point);
+      saveElement.innerText = "Address: " + point.formatedValue;
+    }
+  }
+  zasilkovnaButton.addEventListener("click", function () {
+    Packeta.Widget.pick(packetaApiKey, showSelectedPickupPoint, packetaOptions);
+  });
+}
+
 updateLicencePrices(170, 490, 250, 20);
 animateRadioButtons("#plans-table .form-input");
 animateRadioButtons("#hardware .hardware-form-input");
@@ -182,3 +208,4 @@ formSwitchStep("button#continue");
 formSwitchStep("button#back");
 calculateTotalPrice();
 SwitchDeliveryAddressFields();
+Zasilkovna();

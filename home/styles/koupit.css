@@ -322,7 +322,7 @@ div.form-box {
   align-items: start;
 }
 
-img#webpay {
+img.title-icon {
   width: 120px;
 }
 
@@ -392,6 +392,32 @@ section#delivery-address-checkbox-field label {
   display: flex;
   width: 100%;
 }
+
+/* ================================ZASILKOVNA===============================*/
+
+.packeta-selector-open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: auto;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  border: none;
+  border-radius: 8px;
+  background-color: #ba1b02;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  padding: 14px 20px;
+}
+
+.zasilkovna-icon {
+  width: 30px;
+  height: 30px;
+}
+
 /* ================================RESPONSIVITY===============================*/
 
 @media (max-width: 1200px) {

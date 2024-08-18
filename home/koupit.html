@@ -707,11 +707,34 @@
                 </section>
               </section>
             </div>
+            <!--DELIVERY-->
+            <div class="form-box">
+              <section class="step-title">
+                <p>Doručení</p>
+                <img
+                  class="title-icon"
+                  src="/home/images/zasilkovna-logo.png"
+                  alt=""
+                />
+              </section>
+              <button class="hover-animation packeta-selector-open">
+                <img
+                  class="zasilkovna-icon"
+                  src="/home/images/ikona-zasilkovna.png"
+                />
+                Vybrat výdejní místo
+              </button>
+              <div class="pickup-point-value"></div>
+            </div>
             <!--PAYMENT METHOD-->
             <div class="form-box">
               <section class="step-title">
                 <p>Platba</p>
-                <img id="webpay" src="/home/images/GPwebpay-logo.png" alt="" />
+                <img
+                  class="title-icon"
+                  src="/home/images/GPwebpay-logo.png"
+                  alt=""
+                />
               </section>
               <p>
                 Přechodem k platbě souhlasíte s našimi obchodními podmínkami a
@@ -721,11 +744,16 @@
                 <p id="form-price">Celkem s DPH: Chybí údaje</p>
               </section>
             </div>
+            <!--FORM CONTROLS-->
             <div id="final-buttons">
               <button id="back" class="primary-button hover-animation">
                 Zpět
               </button>
-              <button type="submit" class="primary-button hover-animation">
+              <button
+                type="submit"
+                id="order-button"
+                class="primary-button hover-animation"
+              >
                 Přejít k platbě
               </button>
             </div>
@@ -761,5 +789,6 @@
     </section>
     <script src="/home/scripts/script.js"></script>
     <script src="/home/scripts/koupit.js"></script>
+    <script src="/home/scripts/zasilkovna.js"></script>
   </body>
 </html>
