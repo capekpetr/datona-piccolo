@@ -25,6 +25,13 @@ input[type="radio"] {
 }
 
 input[type="checkbox"] {
+  cursor: pointer;
+  height: 1rem;
+  width: 1rem !important;
+  accent-color: var(--primary);
+}
+
+section#form-step-1 input[type="checkbox"] {
   display: none;
 }
 
@@ -336,6 +343,15 @@ img#webpay {
   font-weight: bold;
 }
 
+section#form-step-1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 75px;
+}
+
 section#form-step-2 {
   width: 100%;
   display: none;
@@ -345,13 +361,36 @@ section#form-step-2 {
   gap: 20px;
 }
 
-section#form-step-1 {
+section#delivery-address-checkbox-field {
+  margin-top: 10px;
   width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: start;
+  gap: 10px;
   align-items: center;
-  gap: 75px;
+}
+
+div#final-buttons {
+  margin-top: 10px;
+  width: 100%;
+  max-width: 550px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section#delivery-address-checkbox-field label {
+  cursor: pointer;
+}
+
+.delivery-address-wrapper {
+  display: none;
+}
+
+.delivery-address-wrapper-visible {
+  display: flex;
+  width: 100%;
 }
 /* ================================RESPONSIVITY===============================*/
 

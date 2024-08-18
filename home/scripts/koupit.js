@@ -131,16 +131,21 @@ function calculateTotalPrice() {
   updatePrices();
 }
 
-function formNextStep() {
-  const button = document.querySelector("button#continue");
+function formSwitchStep(buttonLocation) {
+  const button = document.querySelector(buttonLocation);
   const formPart1 = document.querySelector("section#form-step-1");
   const formPart2 = document.querySelector("section#form-step-2");
 
   button.addEventListener("click", function () {
-    if (document.querySelector("#calculation #order-quantity").value >= "1") {
+    if (
+      document.querySelector("#calculation #order-quantity").value >= "1" &&
+      formPart1.style.display !== "none"
+    ) {
       formPart1.style.display = "none";
       formPart2.style.display = "flex";
     } else {
+      formPart1.style.display = "flex";
+      formPart2.style.display = "none";
     }
   });
 }
@@ -157,10 +162,23 @@ function checkForNegativeNumber(inputSelector) {
   });
 }
 
+function SwitchDeliveryAddressFields() {
+  const checkbox = document.querySelector("input#delivery-address-checkbox");
+  const addressFieldWrapper = document.querySelector(
+    "section.delivery-address-wrapper"
+  );
+
+  checkbox.addEventListener("change", function () {
+    addressFieldWrapper.classList.toggle("delivery-address-wrapper-visible");
+  });
+}
+
 updateLicencePrices(170, 490, 250, 20);
 animateRadioButtons("#plans-table .form-input");
 animateRadioButtons("#hardware .hardware-form-input");
 animateCheckboxButtons("#extensions .extensions-form-input");
 checkForNegativeNumber("#calculation #order-quantity");
+formSwitchStep("button#continue");
+formSwitchStep("button#back");
 calculateTotalPrice();
-formNextStep();
+SwitchDeliveryAddressFields();

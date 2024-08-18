@@ -387,7 +387,7 @@
                     <section class="product-image-wrapper">
                       <img
                         class="box-image"
-                        src="./images/tablet-2.avif"
+                        src="./images/tablet-2.png"
                         alt=""
                       />
                     </section>
@@ -421,7 +421,7 @@
                     <section class="product-image-wrapper">
                       <img
                         class="box-image"
-                        src="./images/customDevice.avif"
+                        src="./images/customDevice.png"
                         alt=""
                       />
                     </section>
@@ -627,7 +627,7 @@
             <!--PERSONAL INFORMATION-->
             <div class="form-box">
               <section class="step-title">
-                <p>Osobní údaje</p>
+                <p>Fakturační údaje</p>
               </section>
               <section class="form-fields">
                 <section class="form-row">
@@ -668,6 +668,43 @@
                     <input id="postal-code" type="text" required />
                   </article>
                 </section>
+                <section id="delivery-address-checkbox-field">
+                  <input id="delivery-address-checkbox" type="checkbox" />
+                  <label for="delivery-address-checkbox"
+                    >Dodací adresa je jiná než fakturační</label
+                  >
+                </section>
+              </section>
+              <section class="form-fields delivery-address-wrapper">
+                <section class="step-title">
+                  <p>Dodací údaje</p>
+                </section>
+                <section class="form-row">
+                  <article class="form-field">
+                    <label for="name">Jméno:</label>
+                    <input id="name" type="text" />
+                  </article>
+                  <article class="form-field">
+                    <label for="last-name">Přijmení:</label>
+                    <input id="last-name" type="text" />
+                  </article>
+                </section>
+                <section class="form-row">
+                  <article class="form-field">
+                    <label for="address">Ulice a číslo popisné:</label>
+                    <input id="address" type="text" />
+                  </article>
+                </section>
+                <section class="form-row">
+                  <article class="form-field">
+                    <label for="city">Město:</label>
+                    <input id="city" type="text" />
+                  </article>
+                  <article class="form-field">
+                    <label for="postal-code">PSČ:</label>
+                    <input id="postal-code" type="text" />
+                  </article>
+                </section>
               </section>
             </div>
             <!--PAYMENT METHOD-->
@@ -677,15 +714,20 @@
                 <img id="webpay" src="/home/images/GPwebpay-logo.png" alt="" />
               </section>
               <p>
-                Odesláním objednávky souhlasíte s našimi obchodními podmínkami a
+                Přechodem k platbě souhlasíte s našimi obchodními podmínkami a
                 zásadami zpracování osobních údajů
               </p>
               <section id="form-payment-wrapper">
                 <p id="form-price">Celkem s DPH: Chybí údaje</p>
-                <button type="submit" class="primary-button hover-animation">
-                  Přejít k platbě
-                </button>
               </section>
+            </div>
+            <div id="final-buttons">
+              <button id="back" class="primary-button hover-animation">
+                Zpět
+              </button>
+              <button type="submit" class="primary-button hover-animation">
+                Přejít k platbě
+              </button>
             </div>
           </section>
         </form>
