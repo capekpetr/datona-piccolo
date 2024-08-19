@@ -393,9 +393,17 @@ section#delivery-address-checkbox-field label {
   width: 100%;
 }
 
+#form-price {
+  color: var(--primary);
+}
+
+#form-2-price {
+  font-size: 1.5rem;
+}
+
 /* ================================ZASILKOVNA===============================*/
 
-.packeta-selector-open {
+.packeta-primary-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -410,6 +418,24 @@ section#delivery-address-checkbox-field label {
   font-size: 20px;
   font-weight: 600;
   color: white;
+  padding: 14px 20px;
+}
+
+.packeta-secondary-button {
+  border: solid 2px #ba1b02;
+  background-color: white;
+  color: #ba1b02;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: auto;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: 600;
   padding: 14px 20px;
 }
 

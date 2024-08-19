@@ -83,6 +83,27 @@ function animateCheckboxButtons(inputsLocationClass) {
   });
 }
 
+function animatePacketaButtons(inputsLocationClass) {
+  document.querySelectorAll(inputsLocationClass).forEach((input) => {
+    input.addEventListener("change", function () {
+      document.querySelectorAll(inputsLocationClass).forEach((input) => {
+        input.nextElementSibling.firstChild.classList.remove(
+          "packeta-primary-button"
+        );
+        input.nextElementSibling.firstChild.classList.add(
+          "packeta-secondary-button"
+        );
+      });
+      this.nextElementSibling.firstChild.classList.remove(
+        "packeta-secondary-button"
+      );
+      this.nextElementSibling.firstChild.classList.add(
+        "packeta-primary-button"
+      );
+    });
+  });
+}
+
 function calculateTotalPrice() {
   const taxPercentage = 21;
   const numberFormatter = new Intl.NumberFormat("cs-CZ");
@@ -95,6 +116,8 @@ function calculateTotalPrice() {
       .dataset.price;
     const hardwarePrice = document.querySelector("#hardware input:checked")
       .dataset.price;
+    const deliveryElement = document.querySelector("#delivery input:checked");
+    const deliveryPrice = deliveryElement ? +deliveryElement.dataset.price : 0;
     let extensionsPrice = 0;
     document
       .querySelectorAll("#extensions .extensions-form-input:checked")
@@ -122,8 +145,10 @@ function calculateTotalPrice() {
       numberFormatter.format(totalNoTax.toFixed(2)) + " Kč";
     document.querySelector(".calculation-field #extensions-price").innerText =
       numberFormatter.format(extensionsTotal.toFixed(2)) + " Kč";
-    document.querySelector("#form-price").innerText =
-      "Celkem: " + numberFormatter.format(totalWithTax.toFixed(2)) + " Kč";
+    document.querySelector("#form-price").innerHTML =
+      'Celkem s dopravou: <span id="form-2-price">' +
+      numberFormatter.format((totalWithTax + deliveryPrice).toFixed(2)) +
+      " Kč</span>";
 
     if (licenceTotal == totalNoTax) {
       deliveryField.style.display = "none";
@@ -151,10 +176,12 @@ function formSwitchStep(buttonLocation) {
       formPart1.style.display = "none";
       formPart2.style.display = "flex";
       window.location.hash = "";
+      window.location.hash = "#container";
     } else {
       formPart1.style.display = "flex";
       formPart2.style.display = "none";
-      window.location.hash = "#calculation";
+      window.location.hash = "";
+      window.location.hash = "#container";
     }
   });
 }
@@ -185,12 +212,14 @@ function SwitchDeliveryAddressFields() {
 function Zasilkovna() {
   const packetaApiKey = "762a70838a1c4a35";
   const packetaOptions = {
-    valueFormat: '"Packeta",id,carrierId,carrierPickupPointId,name,city,street',
+    country: "cz",
+    language: "cs",
+    valueFormat: "name,city",
     view: "modal",
+    defaultCurrency: "Kč",
+    defaultPrice: "100",
   };
-  const zasilkovnaButton = document.querySelector(
-    "button.packeta-selector-open"
-  );
+  const zasilkovnaButton = document.querySelector(".packeta-selector-open");
   false;
   function showSelectedPickupPoint(point) {
     const saveElement = document.querySelector(".pickup-point-value");
@@ -198,7 +227,7 @@ function Zasilkovna() {
     saveElement.innerText = "";
     if (point) {
       console.log("Selected point", point);
-      saveElement.innerText = "Address: " + point.formatedValue;
+      saveElement.innerHTML = "<b>Vybrané místo: </b>" + point.formatedValue;
     }
   }
   zasilkovnaButton.addEventListener("click", function () {
@@ -209,6 +238,7 @@ function Zasilkovna() {
 updateLicencePrices(170, 490, 250, 20);
 animateRadioButtons("#plans-table .form-input");
 animateRadioButtons("#hardware .hardware-form-input");
+animatePacketaButtons("#delivery .form-input");
 animateCheckboxButtons("#extensions .extensions-form-input");
 checkForNegativeNumber("#calculation #order-quantity");
 formSwitchStep("button#continue");

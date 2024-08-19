@@ -624,6 +624,55 @@
           <!--FORM STEP 2-->
           <section id="form-step-2">
             <h2>Dokončení <span class="text-highlight">objednávky</span></h2>
+            <!--DELIVERY-->
+            <div class="form-box" id="delivery">
+              <section class="step-title">
+                <p>Způsob doručení</p>
+                <img
+                  class="title-icon"
+                  src="/home/images/zasilkovna-logo.png"
+                  alt=""
+                />
+              </section>
+              <!--TEST-->
+              <input
+                data-price="70"
+                class="form-input"
+                type="radio"
+                name="doruceni"
+                id="zasilkovna1"
+                required
+              />
+              <label for="zasilkovna1"
+                ><p
+                  class="packeta-secondary-button hover-animation packeta-selector-open"
+                >
+                  <img
+                    class="zasilkovna-icon"
+                    src="/home/images/ikona-zasilkovna.png"
+                  />
+                  Výdejní místo (70Kč)
+                </p></label
+              >
+              <input
+                data-price="120"
+                class="form-input"
+                type="radio"
+                name="doruceni"
+                id="zasilkovna2"
+                required
+              />
+              <label for="zasilkovna2"
+                ><p class="hover-animation packeta-secondary-button">
+                  <img
+                    class="zasilkovna-icon"
+                    src="/home/images/ikona-zasilkovna.png"
+                  />
+                  Doručení na adresu (120Kč)
+                </p></label
+              >
+              <p class="pickup-point-value"></p>
+            </div>
             <!--PERSONAL INFORMATION-->
             <div class="form-box">
               <section class="step-title">
@@ -648,7 +697,9 @@
                 </section>
                 <section class="form-row">
                   <article class="form-field">
-                    <label for="email">Email:</label>
+                    <label for="email"
+                      >Email (na tento email Vám pošleme licenci):</label
+                    >
                     <input id="email" type="email" required />
                   </article>
                 </section>
@@ -706,25 +757,6 @@
                   </article>
                 </section>
               </section>
-            </div>
-            <!--DELIVERY-->
-            <div class="form-box" id="delivery">
-              <section class="step-title">
-                <p>Doručení</p>
-                <img
-                  class="title-icon"
-                  src="/home/images/zasilkovna-logo.png"
-                  alt=""
-                />
-              </section>
-              <button class="hover-animation packeta-selector-open">
-                <img
-                  class="zasilkovna-icon"
-                  src="/home/images/ikona-zasilkovna.png"
-                />
-                Vybrat výdejní místo
-              </button>
-              <div class="pickup-point-value"></div>
             </div>
             <!--PAYMENT METHOD-->
             <div class="form-box">
