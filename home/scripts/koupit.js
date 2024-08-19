@@ -101,6 +101,7 @@ function calculateTotalPrice() {
       .forEach(function (checkbox) {
         extensionsPrice = +extensionsPrice + +checkbox.dataset.price;
       });
+    const deliveryField = document.querySelector("div.form-box#delivery");
 
     const licenceTotal = licencePrice * orderQuantity;
     const hardwareTotal = hardwarePrice * orderQuantity;
@@ -123,6 +124,12 @@ function calculateTotalPrice() {
       numberFormatter.format(extensionsTotal.toFixed(2)) + " Kč";
     document.querySelector("#form-price").innerText =
       "Celkem: " + numberFormatter.format(totalWithTax.toFixed(2)) + " Kč";
+
+    if (licenceTotal == totalNoTax) {
+      deliveryField.style.display = "none";
+    } else {
+      deliveryField.style.display = "flex";
+    }
   }
 
   document.querySelectorAll("input").forEach((input) => {
