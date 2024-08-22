@@ -268,17 +268,6 @@ function HandleOrderFormSubmit() {
     .querySelector("form#order-form")
     .addEventListener("submit", function (event) {
       event.preventDefault();
-      if (!document.querySelector("#delivery input.form-input:checked")) {
-        alert("Vyberte, prosím dopravu");
-        return;
-      }
-      if (
-        document.querySelector("#delivery p.pickup-point-value").innerHTML
-          .length < 1
-      ) {
-        alert("Vyberte, Výdejní místo");
-        return;
-      }
       const formData = new FormData(event.target);
       const data = {};
 
