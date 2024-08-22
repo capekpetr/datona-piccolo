@@ -706,6 +706,7 @@
                       id="name"
                       name="uzivatel.jmeno"
                       type="text"
+                      autocomplete="given-name"
                       required
                     />
                   </article>
@@ -715,6 +716,7 @@
                       id="last-name"
                       name="uzivatel.prijmeni"
                       type="text"
+                      autocomplete="family-name"
                       required
                     />
                   </article>
@@ -726,6 +728,7 @@
                       id="phone"
                       name="fakturacni_adresa.telefon"
                       type="tel"
+                      autocomplete="tel-national"
                       required
                     />
                   </article>
@@ -737,6 +740,7 @@
                       id="nazev-firmy"
                       name="fakturacni_adresa.nazev_firmy"
                       type="text"
+                      autocomplete="organization"
                     />
                   </article>
                 </section>
@@ -749,6 +753,7 @@
                       id="email"
                       name="fakturacni_adresa.email"
                       type="email"
+                      autocomplete="email"
                       required
                     />
                   </article>
@@ -760,6 +765,7 @@
                       id="address"
                       name="fakturacni_adresa.ulice_a_cp"
                       type="text"
+                      autocomplete="street-address"
                       required
                     />
                   </article>
@@ -771,6 +777,7 @@
                       id="city"
                       name="fakturacni_adresa.mesto"
                       type="text"
+                      autocomplete="city"
                       required
                     />
                   </article>
@@ -780,6 +787,7 @@
                       id="postal-code"
                       name="fakturacni_adresa.PSC"
                       type="text"
+                      autocomplete="postal-code"
                       required
                     />
                   </article>
@@ -802,7 +810,12 @@
                 <section class="form-row">
                   <article class="form-field">
                     <label for="name2">Jméno:</label>
-                    <input name="dodaci_adresa.jmeno" id="name2" type="text" />
+                    <input
+                      name="dodaci_adresa.jmeno"
+                      id="name2"
+                      type="text"
+                      autocomplete="given-name"
+                    />
                   </article>
                   <article class="form-field">
                     <label for="last-name2">Přijmení:</label>
@@ -810,6 +823,7 @@
                       name="dodaci_adresa.prijmeni"
                       id="last-name2"
                       type="text"
+                      autocomplete="family-name"
                     />
                   </article>
                 </section>
@@ -820,6 +834,7 @@
                       id="nazev-firmy2"
                       name="dodaci_adresa.nazev_firmy"
                       type="text"
+                      autocomplete="organization"
                     />
                   </article>
                 </section>
@@ -830,13 +845,19 @@
                       name="dodaci_adresa.ulice_a_cp"
                       id="address2"
                       type="text"
+                      autocomplete="street-address"
                     />
                   </article>
                 </section>
                 <section class="form-row">
                   <article class="form-field">
                     <label for="city2">Město:</label>
-                    <input name="dodaci_adresa.mesto" id="city2" type="text" />
+                    <input
+                      name="dodaci_adresa.mesto"
+                      id="city2"
+                      type="text"
+                      autocomplete="city"
+                    />
                   </article>
                   <article class="form-field">
                     <label for="postal-code2">PSČ:</label>
@@ -844,6 +865,7 @@
                       name="dodaci_adresa.PSC"
                       id="postal-code2"
                       type="text"
+                      autocomplete="postal-code"
                     />
                   </article>
                 </section>
