@@ -176,12 +176,12 @@ function formSwitchStep(buttonLocation) {
       formPart1.style.display = "none";
       formPart2.style.display = "flex";
       window.location.hash = "";
-      window.location.hash = "#container";
+      window.scrollTo(0, 0);
     } else {
       formPart1.style.display = "flex";
       formPart2.style.display = "none";
       window.location.hash = "";
-      window.location.hash = "#container";
+      window.scrollTo(0, 0);
     }
   });
 }
@@ -217,9 +217,11 @@ function Zasilkovna() {
     valueFormat: "name,city",
     view: "modal",
     defaultCurrency: "Kč",
-    defaultPrice: "100",
+    defaultPrice: "70",
   };
   const zasilkovnaButton = document.querySelector(".packeta-selector-open");
+  const saveElementInput = document.querySelector("input#pickup-point-input");
+
   false;
   function showSelectedPickupPoint(point) {
     const saveElement = document.querySelector(".pickup-point-value");
@@ -228,11 +230,77 @@ function Zasilkovna() {
     if (point) {
       console.log("Selected point", point);
       saveElement.innerHTML = "<b>Vybrané místo: </b>" + point.formatedValue;
+      saveElementInput.value = point.formatedValue;
     }
   }
   zasilkovnaButton.addEventListener("click", function () {
     Packeta.Widget.pick(packetaApiKey, showSelectedPickupPoint, packetaOptions);
   });
+}
+
+function ZasilkovnaConditionalLogic(inputsLocationClass) {
+  const zasilkovnaPointValue = document.querySelector(".pickup-point-value");
+  const deliveryAddressCheckbox = document.querySelector(
+    "section#delivery-address-checkbox-field"
+  );
+  document.querySelectorAll(inputsLocationClass).forEach((input) => {
+    input.addEventListener("click", function () {
+      document.querySelectorAll(inputsLocationClass).forEach((input) => {
+        if (
+          document.querySelector("div#delivery input:checked").id ==
+          "zasilkovna1"
+        ) {
+          deliveryAddressCheckbox.style.display = "none";
+        } else if (
+          document.querySelector("div#delivery input:checked").id ==
+          "zasilkovna2"
+        ) {
+          zasilkovnaPointValue.innerHTML = "";
+          deliveryAddressCheckbox.style.display = "flex";
+        }
+      });
+    });
+  });
+}
+
+function HandleOrderFormSubmit() {
+  document
+    .querySelector("form#order-form")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+      const formData = new FormData(event.target);
+      const data = {};
+
+      formData.forEach((value, key) => {
+        const keys = key.split(".");
+        let obj = data;
+
+        keys.forEach((k, i) => {
+          if (i === keys.length - 1) {
+            obj[k] = value;
+          } else {
+            if (!obj[k]) obj[k] = {};
+            obj = obj[k];
+          }
+        });
+      });
+      console.log(data);
+      const jsonData = JSON.stringify(formData);
+      fetch("https://jsonplaceholder.typicode.com/posts", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: jsonData,
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Success:", data);
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    });
 }
 
 updateLicencePrices(170, 490, 250, 20);
@@ -246,3 +314,5 @@ formSwitchStep("button#back");
 calculateTotalPrice();
 SwitchDeliveryAddressFields();
 Zasilkovna();
+ZasilkovnaConditionalLogic("#delivery .form-input");
+HandleOrderFormSubmit();
