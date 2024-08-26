@@ -163,27 +163,41 @@ function calculateTotalPrice() {
   updatePrices();
 }
 
-function formSwitchStep(buttonLocation) {
-  const button = document.querySelector(buttonLocation);
+function formSwitchStep(visibleFormStep) {
   const formPart1 = document.querySelector("section#form-step-1");
   const formPart2 = document.querySelector("section#form-step-2");
+  const formPartSuccess = document.querySelector("section#form-step-success");
+  const formPartError = document.querySelector("section#form-step-error");
 
-  button.addEventListener("click", function () {
-    if (
-      document.querySelector("#calculation #order-quantity").value >= "1" &&
-      formPart1.style.display !== "none"
-    ) {
-      formPart1.style.display = "none";
-      formPart2.style.display = "flex";
-      window.location.hash = "";
-      window.scrollTo(0, 0);
-    } else {
-      formPart1.style.display = "flex";
-      formPart2.style.display = "none";
-      window.location.hash = "";
-      window.scrollTo(0, 0);
-    }
-  });
+  if (visibleFormStep == "formStep1") {
+    formPart1.style.display = "flex";
+    formPartError.style.display = "none";
+    formPartSuccess.style.display = "none";
+    formPart2.style.display = "none";
+    window.location.hash = "";
+    window.scrollTo(0, 0);
+  } else if (visibleFormStep == "formStep2") {
+    formPart1.style.display = "none";
+    formPart2.style.display = "flex";
+    formPartError.style.display = "none";
+    formPartSuccess.style.display = "none";
+    window.location.hash = "";
+    window.scrollTo(0, 0);
+  } else if (visibleFormStep == "formStepSuccess") {
+    formPart1.style.display = "none";
+    formPart2.style.display = "none";
+    formPartError.style.display = "none";
+    formPartSuccess.style.display = "flex";
+    window.location.hash = "";
+    window.scrollTo(0, 0);
+  } else if (visibleFormStep == "formStepError") {
+    formPart1.style.display = "none";
+    formPart2.style.display = "none";
+    formPartError.style.display = "flex";
+    formPartSuccess.style.display = "none";
+    window.location.hash = "";
+    window.scrollTo(0, 0);
+  }
 }
 
 function checkForNegativeNumber(inputSelector) {
@@ -296,10 +310,11 @@ function HandleOrderFormSubmit() {
         .then((response) => response.json())
         .then((data) => {
           console.log("Success:", data);
+          formSwitchStep("formStepSuccess");
         })
         .catch((error) => {
           console.error("Error:", error);
-          alert("Chyba. Zkontrolujte prosím všechna políčka");
+          formSwitchStep("formStepError");
         });
     });
 }
@@ -310,8 +325,22 @@ animateRadioButtons("#hardware .hardware-form-input");
 animatePacketaButtons("#delivery .form-input");
 animateCheckboxButtons("#extensions .extensions-form-input");
 checkForNegativeNumber("#calculation #order-quantity");
-formSwitchStep("button#continue");
-formSwitchStep("button#back");
+document
+  .querySelector("button#continue")
+  .addEventListener("click", function () {
+    formSwitchStep("formStep2");
+  });
+document.querySelector("button#back").addEventListener("click", function () {
+  formSwitchStep("formStep1");
+});
+document
+  .querySelectorAll("section.alert button.alert-back")
+  .forEach((button) => {
+    button.addEventListener("click", function () {
+      location.reload();
+    });
+  });
+
 calculateTotalPrice();
 SwitchDeliveryAddressFields();
 Zasilkovna();

@@ -447,6 +447,33 @@ section#delivery-address-checkbox-field label {
   height: 30px;
 }
 
+/* ================================FORM-STEP-ERROR===============================*/
+section#form-step-error {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+section#form-step-error h2 {
+  color: red;
+}
+
+/* ================================FORM-STEP-SUCCESS===============================*/
+
+section#form-step-success {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+section#form-step-success h2 {
+  color: green;
+}
+
 /* ================================RESPONSIVITY===============================*/
 
 @media (max-width: 1200px) {
