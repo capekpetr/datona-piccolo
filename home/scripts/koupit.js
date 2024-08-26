@@ -277,11 +277,36 @@ function ZasilkovnaConditionalLogic(inputsLocationClass) {
   });
 }
 
+function formAddHiddenFields() {
+  const cenaSDPH = document.querySelector(
+    'input[name="kalkulace.celkova_cena_s_DPH"]'
+  );
+  const cenaBezDPH = document.querySelector(
+    'input[name="kalkulace.celkova_cena_bez_DPH"]'
+  );
+  const PlatbaZaLicenci = document.querySelector(
+    'input[name="polozky.licence.cena_bez_DPH"]'
+  );
+
+  PlatbaZaLicenci.value = document.querySelector(
+    "#plans-table input:checked"
+  ).dataset.price;
+
+  cenaBezDPH.value = document
+    .querySelector(".calculation-field #total-no-tax")
+    .innerText.replace(/\D/g, "");
+
+  cenaSDPH.value = document
+    .querySelector(".calculation-field #total-with-tax")
+    .innerText.replace(/\D/g, "");
+}
+
 function HandleOrderFormSubmit() {
   document
     .querySelector("form#order-form")
     .addEventListener("submit", function (event) {
       event.preventDefault();
+      formAddHiddenFields();
       const formData = new FormData(event.target);
       const data = {};
 
