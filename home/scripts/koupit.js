@@ -294,11 +294,15 @@ function formAddHiddenFields() {
 
   cenaBezDPH.value = document
     .querySelector(".calculation-field #total-no-tax")
-    .innerText.replace(/\D/g, "");
+    .innerText.replace(/Kč/g, "")
+    .replace(/\s+/g, "")
+    .replace(/,/g, ".");
 
   cenaSDPH.value = document
     .querySelector(".calculation-field #total-with-tax")
-    .innerText.replace(/\D/g, "");
+    .innerText.replace(/Kč/g, "")
+    .replace(/\s+/g, "")
+    .replace(/,/g, ".");
 }
 
 function HandleOrderFormSubmit() {
