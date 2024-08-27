@@ -150,10 +150,13 @@ function calculateTotalPrice() {
       numberFormatter.format((totalWithTax + deliveryPrice).toFixed(2)) +
       " Kč</span>";
 
+    const zasilkovnaRadioOption1 = document.querySelector("input#zasilkovna1");
     if (licenceTotal == totalNoTax) {
       deliveryField.style.display = "none";
+      zasilkovnaRadioOption1.removeAttribute("required");
     } else {
       deliveryField.style.display = "flex";
+      zasilkovnaRadioOption1.setAttribute("required", "");
     }
   }
 
