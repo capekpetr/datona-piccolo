@@ -447,6 +447,10 @@ section#delivery-address-checkbox-field label {
   height: 30px;
 }
 
+article.form-field:has(textarea) {
+  margin-top: 30px;
+}
+
 /* ================================FORM-STEP-ERROR===============================*/
 section#form-step-error {
   display: none;

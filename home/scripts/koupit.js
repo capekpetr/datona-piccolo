@@ -1,3 +1,4 @@
+let licenceDiscount = 0;
 function updateLicencePrices(classic, pro, plus, percentage) {
   const switchInputs = document.querySelectorAll("#switch-section input");
   const classicPrice = document.querySelector("p#classic-price");
@@ -14,6 +15,7 @@ function updateLicencePrices(classic, pro, plus, percentage) {
     if (
       document.querySelector("#switch-section input:checked").id == "yearly"
     ) {
+      licenceDiscount = percentage;
       classicPrice.innerText = `${(classic * (1 - percentage / 100)).toFixed(
         0
       )} Kč`;
@@ -34,6 +36,7 @@ function updateLicencePrices(classic, pro, plus, percentage) {
       ).toFixed(1);
       licencePriceLabel.innerText = "Cena licence (1 rok)";
     } else {
+      licenceDiscount = 0;
       classicPrice.innerText = `${classic} Kč`;
       classicPriceInput.dataset.price = classic;
       proPrice.innerText = `${pro} Kč`;
@@ -287,13 +290,18 @@ function formAddHiddenFields() {
   const cenaBezDPH = document.querySelector(
     'input[name="kalkulace.celkova_cena_bez_DPH"]'
   );
-  const PlatbaZaLicenci = document.querySelector(
-    'input[name="polozky.licence.cena_bez_DPH"]'
+  const PlatbaZaLicenciSeSlevou = document.querySelector(
+    'input[name="polozky.licence.cena_bez_DPH_se_slevou"]'
+  );
+  const SlevaLicence = document.querySelector(
+    'input[name="polozky.licence.sleva"]'
   );
 
-  PlatbaZaLicenci.value = document.querySelector(
+  PlatbaZaLicenciSeSlevou.value = document.querySelector(
     "#plans-table input:checked"
   ).dataset.price;
+
+  SlevaLicence.value = licenceDiscount;
 
   cenaBezDPH.value = document
     .querySelector(".calculation-field #total-no-tax")

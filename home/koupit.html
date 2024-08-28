@@ -756,24 +756,34 @@
                 </section>
                 <section class="form-row">
                   <article class="form-field">
-                    <label for="address">Ulice a číslo popisné:</label>
+                    <label for="country">Stát:</label>
                     <input
-                      id="address"
-                      name="fakturacni_adresa.ulice_a_cp"
+                      id="country"
+                      name="fakturacni_adresa.stat"
                       type="text"
-                      autocomplete="street-address"
+                      autocomplete="country-name"
+                      required
+                    />
+                  </article>
+                  <article class="form-field">
+                    <label for="city">Město/obec</label>
+                    <input
+                      id="city"
+                      name="fakturacni_adresa.mesto"
+                      type="text"
+                      autocomplete="address-level2"
                       required
                     />
                   </article>
                 </section>
                 <section class="form-row">
                   <article class="form-field">
-                    <label for="city">Město:</label>
+                    <label for="address">Ulice a číslo popisné:</label>
                     <input
-                      id="city"
-                      name="fakturacni_adresa.mesto"
+                      id="address"
+                      name="fakturacni_adresa.ulice_a_cp"
                       type="text"
-                      autocomplete="city"
+                      autocomplete="street-address"
                       required
                     />
                   </article>
@@ -825,13 +835,12 @@
                 </section>
                 <section class="form-row">
                   <article class="form-field">
-                    <label for="phone">Telefon:</label>
+                    <label for="phone2">Telefon:</label>
                     <input
-                      id="phone"
+                      id="phone2"
                       name="dodaci_adresa.telefon"
                       type="tel"
                       autocomplete="tel-national"
-                      required
                     />
                   </article>
                   <article class="form-field">
@@ -846,23 +855,32 @@
                 </section>
                 <section class="form-row">
                   <article class="form-field">
+                    <label for="country2">Stát:</label>
+                    <input
+                      name="dodaci_adresa.stat"
+                      id="country2"
+                      type="text"
+                      autocomplete="country-name"
+                    />
+                  </article>
+                  <article class="form-field">
+                    <label for="mesto2">Město/obec:</label>
+                    <input
+                      name="dodaci_adresa.mesto"
+                      id="mesto2"
+                      type="text"
+                      autocomplete="address-level2"
+                    />
+                  </article>
+                </section>
+                <section class="form-row">
+                  <article class="form-field">
                     <label for="address2">Ulice a číslo popisné:</label>
                     <input
                       name="dodaci_adresa.ulice_a_cp"
                       id="address2"
                       type="text"
                       autocomplete="street-address"
-                    />
-                  </article>
-                </section>
-                <section class="form-row">
-                  <article class="form-field">
-                    <label for="city2">Město:</label>
-                    <input
-                      name="dodaci_adresa.mesto"
-                      id="city2"
-                      type="text"
-                      autocomplete="city"
                     />
                   </article>
                   <article class="form-field">
@@ -875,6 +893,12 @@
                     />
                   </article>
                 </section>
+              </section>
+              <section class="form-row">
+                <article class="form-field">
+                  <label for="textarea">Poznámka (nepovinné):</label>
+                  <textarea name="poznamka" id="textarea"></textarea>
+                </article>
               </section>
             </div>
             <!--PAYMENT METHOD-->
@@ -894,7 +918,11 @@
               <section id="form-payment-wrapper">
                 <p id="form-price">Celkem s DPH: Chybí údaje</p>
               </section>
-              <input type="hidden" name="polozky.licence.cena_bez_DPH" />
+              <input
+                type="hidden"
+                name="polozky.licence.cena_bez_DPH_se_slevou"
+              />
+              <input type="hidden" name="polozky.licence.sleva" />
               <input type="hidden" name="kalkulace.celkova_cena_s_DPH" />
               <input type="hidden" name="kalkulace.celkova_cena_bez_DPH" />
             </div>

@@ -230,7 +230,8 @@ form.burger-login {
   align-items: center;
 }
 
-input {
+input,
+textarea {
   width: 100%;
   display: block;
   padding: 8px 15px;
@@ -243,7 +244,8 @@ input::placeholder {
   color: #b0bec5;
 }
 
-input:focus {
+input:focus,
+textarea:focus {
   outline: none;
   border: solid 1px var(--primary);
 }
