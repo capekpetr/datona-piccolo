@@ -317,46 +317,34 @@ function formAddHiddenFields() {
 }
 
 function HandleOrderFormSubmit() {
-  document
-    .querySelector("form#order-form")
-    .addEventListener("submit", function (event) {
-      event.preventDefault();
-      formAddHiddenFields();
-      const formData = new FormData(event.target);
-      const data = {};
+  const orderForm = document.querySelector("form#order-form");
 
-      formData.forEach((value, key) => {
-        const keys = key.split(".");
-        let obj = data;
+  orderForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    formAddHiddenFields();
 
-        keys.forEach((k, i) => {
-          if (i === keys.length - 1) {
-            obj[k] = value;
-          } else {
-            if (!obj[k]) obj[k] = {};
-            obj = obj[k];
-          }
-        });
-      });
-      console.log(data);
-      const jsonData = JSON.stringify(formData);
-      fetch("https://jsonplaceholder.typicode.com/posts", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: jsonData,
+    const formElement = event.target;
+    const formData = new FormData(formElement);
+
+    fetch("https://jsonplaceholder.typicode.com/posts", {
+      method: "POST",
+      body: formData,
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
       })
-        .then((response) => response.json())
-        .then((data) => {
-          console.log("Success:", data);
-          formSwitchStep("formStepSuccess");
-        })
-        .catch((error) => {
-          console.error("Error:", error);
-          formSwitchStep("formStepError");
-        });
-    });
+      .then((data) => {
+        console.log("Success:", data);
+        formSwitchStep("formStepSuccess");
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        formSwitchStep("formStepError");
+      });
+  });
 }
 
 updateLicencePrices(170, 490, 250, 20);
